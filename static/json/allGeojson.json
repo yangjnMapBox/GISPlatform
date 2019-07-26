@@ -1,0 +1,2332 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			"name": "福建福州白岩潭",
+			"ph": "7.38",
+			"phquality": "II",
+			"oxygen": "7",
+			"oxygenquality": "II",
+			"nitrogen": "0.32",
+			"nitrogenquality": "II",
+			"permangan": "1.49",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "入海",
+			"profile": "福州白岩潭水质自动监测站位于长乐市营前镇台商渡假中心。点位坐标东经119度27分35.8秒，北纬25度58分25.6秒。属闽江（入海口）。由福州市环境保护监测站管理。距离80余公里。建于2003年4月。",
+			"belong": "东南诸河",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [119.45994400000001, 25.973778]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "浙江湖州新塘港",
+			"ph": "8.17",
+			"phquality": "III",
+			"oxygen": "5.82",
+			"oxygenquality": "III",
+			"nitrogen": "0.25",
+			"nitrogenquality": "III",
+			"permangan": "4.38",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "浙-苏省界",
+			"profile": "湖州新塘港水质自动监测站位于湖州市白雀乡。点位坐标东经120度50分20秒，北纬30度50分50秒。属太湖流域，新塘港河（浙-苏省界）。断面名称:湖州新塘港。由湖州市环境保护监测中心站托管，距离5公里。建于1999年11月。",
+			"belong": "太湖流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [120.838889, 30.847222]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏苏州西山",
+			"ph": "8.32653",
+			"phquality": "II",
+			"oxygen": "11.2167",
+			"oxygenquality": "II",
+			"nitrogen": "0.16",
+			"nitrogenquality": "II",
+			"permangan": "2.09",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "湖体",
+			"profile": "苏州西山水质自动监测站位于苏州市吴中区太湖西山岛西部。点位坐标东经120度12分，北纬31度13分。属太湖流域，太湖湖体。由苏州市吴中区环境监测站托管。距离为60多公里。建于2002年11月。",
+			"belong": "太湖流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [120.2, 31.216667]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "浙江嘉兴王江泾",
+			"ph": "7.49",
+			"phquality": "IV",
+			"oxygen": "3.88",
+			"oxygenquality": "IV",
+			"nitrogen": "0.52",
+			"nitrogenquality": "IV",
+			"permangan": "3.99",
+			"permanganquality": "IV",
+			"orgacarbon": "--",
+			"orgacarbonquality": "IV",
+			"section": "苏-浙省界",
+			"profile": "嘉兴王江泾水质自动监测站位于嘉兴市秀洲区王江泾镇北洪桥北。点位坐标东经120度42分31秒，北纬30度53分06秒。属太湖流域，京杭大运河（苏-浙省界）。由嘉兴市环境监测站托管。距离20多公里。建于2002年1月。",
+			"belong": "太湖流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [120.708611, 30.885]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏无锡沙渚",
+			"ph": "8.78391",
+			"phquality": "III",
+			"oxygen": "10.3513",
+			"oxygenquality": "III",
+			"nitrogen": "0.12",
+			"nitrogenquality": "III",
+			"permangan": "4.21",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "湖体",
+			"profile": "无锡沙渚水质自动监测站位于无锡市南泉镇自来水厂内。点位坐标东经120度13分46.4秒,北纬31度23分57.83秒。太湖流域，太湖（湖体），国控断面。由江苏省无锡市环境监测站托管，距离20公里。建于2001年1月。",
+			"belong": "太湖流域",
+			"date": "2019-03-14",
+			"time": "10:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [120.225278, 31.399397]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏宜兴兰山嘴",
+			"ph": "7.35645",
+			"phquality": "II",
+			"oxygen": "8.44302",
+			"oxygenquality": "II",
+			"nitrogen": "0.45",
+			"nitrogenquality": "II",
+			"permangan": "3.7",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "湖体",
+			"profile": "宜兴兰山嘴水质自动监测站位于宜兴市濮东镇黑龙江农垦太湖疗养院内。点位坐标东经119度54分42.5秒，北纬31度12分56秒。属太湖流域，太湖西半湖湖体。由宜兴市环境监测站托管。距离为30多公里。建于2002年10月。",
+			"belong": "太湖流域",
+			"date": "2019-03-15",
+			"time": "04:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [119.91180600000001, 31.215556]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "上海青浦急水港",
+			"ph": "7.96",
+			"phquality": "II",
+			"oxygen": "7.13",
+			"oxygenquality": "II",
+			"nitrogen": "0.16",
+			"nitrogenquality": "II",
+			"permangan": "2.53",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "苏-沪省界",
+			"profile": "上海青浦急水港水质自动监测站位于上海青浦区金泽镇急水港大桥南侧。点位坐标东经120度54分5.6秒，北纬31度06分56秒。属太湖流域，急水港河（苏-沪省界）。该站由上海市环境监测中心托管，距离为30公里。建于2000年11月。",
+			"belong": "太湖流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [120.901556, 31.115556]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "浙江嘉兴斜路港",
+			"ph": "7.52",
+			"phquality": "III",
+			"oxygen": "8.61",
+			"oxygenquality": "III",
+			"nitrogen": "0.13",
+			"nitrogenquality": "III",
+			"permangan": "4.58",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "苏-浙省界",
+			"profile": "嘉兴斜路港斜路水质自动监测站位于嘉兴市秀洲区王江泾镇，点位坐标东经120度42分31秒，北纬30度53分06秒。属太湖流域，斜路港河（苏-浙省界）。由.嘉兴市环境监测站托管。距离20多公里。建于2003年12月。",
+			"belong": "太湖流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [120.708611, 30.885]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽合肥湖滨",
+			"ph": "7.94",
+			"phquality": "III",
+			"oxygen": "7.9",
+			"oxygenquality": "III",
+			"nitrogen": "0.31",
+			"nitrogenquality": "III",
+			"permangan": "5.12",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "巢湖流域",
+			"profile": "合肥湖滨水质自动监测站位于安徽省合肥市，巢湖西半湖东岸。点位坐标东经117度27分30秒，北纬31度40分33秒。巢湖湖体（西半湖）。由合肥市环境监测中心站托管。距离40公里。建于2002年10月。",
+			"belong": "巢湖流域",
+			"date": "2019-03-14",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.458333, 31.675834000000002]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽巢湖裕溪口",
+			"ph": "7.68122",
+			"phquality": "II",
+			"oxygen": "11.9903",
+			"oxygenquality": "II",
+			"nitrogen": "--",
+			"nitrogenquality": "II",
+			"permangan": "2.46",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "湖体（东半湖）",
+			"profile": "巢湖裕溪口水质自动监测站位于巢湖市龟山脚下。点位坐标东经117度48分1秒、北纬31度36分32秒，巢湖湖体（东半湖）。由巢湖市环境保护监测站托管。距离10多公里。建于2001年1月。",
+			"belong": "巢湖流域",
+			"date": "2019-03-15",
+			"time": "04:10:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.80027799999999, 31.608889]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "黑龙江肇源",
+			"ph": "7.82",
+			"phquality": "III",
+			"oxygen": "9.76",
+			"oxygenquality": "III",
+			"nitrogen": "0.63",
+			"nitrogenquality": "III",
+			"permangan": "4.81",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "",
+			"profile": "黑龙江肇源水质自动监测站位于肇源县肇源镇通江路码头。点位坐标东经124度59分20秒,北纬45度28分15秒。属于松花江流域，松花江干流。由黑龙江肇源环境监测站托管；距水站15公里。2000年12月建成",
+			"belong": "松花江流域",
+			"date": "2019-04-24",
+			"time": "10:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [124.988889, 45.470834]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "吉林长春松花江村",
+			"ph": "7.22",
+			"phquality": "II",
+			"oxygen": "7.44",
+			"oxygenquality": "II",
+			"nitrogen": "0.21",
+			"nitrogenquality": "II",
+			"permangan": "--",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "吉林长春松花江村水质自动监测站位于吉林省榆树市五棵树镇龚家村。点位坐标东经106度55分38秒，北纬39度23分46秒。属松花江流域，干流（第二松花江），由长春市环境监测中心站托管。距离165公里。建于2001年5月。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "08:05:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [106.927223, 39.396111]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "黑龙江同江",
+			"ph": "7.19",
+			"phquality": "III",
+			"oxygen": "8.94",
+			"oxygenquality": "III",
+			"nitrogen": "0.24",
+			"nitrogenquality": "III",
+			"permangan": "5.86",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "入黑龙江前",
+			"profile": "同江水质自动监测站位于黑龙江省同江市横江口。点位坐标经纬度东经132度28分5秒,北纬47度38分32秒。属于松花江流域；黑龙江干流；国控省界断面，由黑龙江省三江环境监测站托管，距水站约4公里。于2001年7月建成。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [132.468056, 47.64189]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "吉林白城白沙滩",
+			"ph": "6.79",
+			"phquality": "I",
+			"oxygen": "10.06",
+			"oxygenquality": "I",
+			"nitrogen": "0.12",
+			"nitrogenquality": "I",
+			"permangan": "--",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "入松花江前",
+			"profile": "吉林白城白沙滩水质自动监测站位于吉林省白城市白沙滩电灌站内，距白城市150公里左右。经纬度是北纬46度95分72秒，东经123度85分36秒。属松花江流域，在嫩江上（入松花江前）；属于国控省界断面。于2001年7月建成。由白城市环境监测站托管。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [124.426667, 47.603333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "黑龙江黑河",
+			"ph": "6.75",
+			"phquality": "II",
+			"oxygen": "9.89",
+			"oxygenquality": "II",
+			"nitrogen": "0.21",
+			"nitrogenquality": "II",
+			"permangan": "3.2",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "中、俄界河",
+			"profile": "黑龙江黑河水质自动监测站位于黑河市卡伦山镇.五道沟村。点位坐标东经129度31分22.6秒,北纬50度05分22.6秒。属于松花江流域，黑龙江干流，国控断面。由黑河市环境监测站托管。距黑河市区18公里左右。建于2003年9月。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "18:02:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [129.53055600000002, 50.089611000000005]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "吉林延边圈河",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "中、朝界河",
+			"profile": "吉林延边圈河水质自动站位于吉林省珲春市敬信镇圈河村庆兴桥附近。点位坐标北纬42度34分，东经130度32分。属松花江流域，图们江（国界），中朝界河。由延边州环境保护监测站托管，距离150公里。建于2003年12月。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [130.533333, 42.566667]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "内蒙古呼伦贝尔黑山头",
+			"ph": "7.86",
+			"phquality": "V",
+			"oxygen": "8.16",
+			"oxygenquality": "V",
+			"nitrogen": "0.04",
+			"nitrogenquality": "V",
+			"permangan": "10.75",
+			"permanganquality": "V",
+			"orgacarbon": "--",
+			"orgacarbonquality": "V",
+			"section": "中、俄界河",
+			"profile": "内蒙古呼伦贝尔黑山头水质自动站位于内蒙古呼伦贝尔市额尔古纳黑山头384码头附近。点位坐标东经119度18分23秒；北纬50度09分27秒。属于松花江流域，额尔古纳河（国界），为中俄界河。由呼伦贝尔市环境监测中心站托管，距呼伦贝尔市200公里。建于2004年12月。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [119.306389, 50.1575]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "黑龙江抚远乌苏镇",
+			"ph": "7.39",
+			"phquality": "III",
+			"oxygen": "8.84",
+			"oxygenquality": "III",
+			"nitrogen": "0.22",
+			"nitrogenquality": "III",
+			"permangan": "5.98",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "中、俄界河",
+			"profile": "黑龙江抚远乌苏镇水质自动监测站位于黑龙江省佳木斯市抚远县，经纬度东经134度40分；北纬48度15分。属于松花江流域，在乌苏里江上，为中俄界河，国界断面。由黑龙江省三江环境监测站托管。距抚远县32公里。于2005年12月建成。",
+			"belong": "松花江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [134.666667, 48.25]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河北张家口八号桥",
+			"ph": "8.91",
+			"phquality": "II",
+			"oxygen": "8.85",
+			"oxygenquality": "II",
+			"nitrogen": "0.32",
+			"nitrogenquality": "II",
+			"permangan": "3.24",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "官厅水库入口",
+			"profile": "河北张家口八号桥水质自动监测站位于河北省张家口市怀来县沙城镇东长城酿酒公司院内。点位坐标东经115度32分52秒，北纬40度20分27秒。属于海河流域，洋河（官厅水库入口）。由张家口市环境监测站托管。距张家口210公里。建于2001年1月。",
+			"belong": "海河流域",
+			"date": "2018-09-20",
+			"time": "08:10:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.547777, 40.340833]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河北石家庄港南水库",
+			"ph": "7.54",
+			"phquality": "Ⅰ",
+			"oxygen": "10.27",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.13",
+			"nitrogenquality": "Ⅰ",
+			"permangan": "2.55",
+			"permanganquality": "Ⅱ",
+			"orgacarbon": "3.31",
+			"orgacarbonquality": "-",
+			"section": "库体",
+			"profile": "河北石家庄岗南水库水质自动监测站位于石家庄市平山县岗南镇。点位坐标东经113度59分34秒,北纬38度19分06秒。海河流域，岗南水库（库体），国控省界断面。由石家庄市环境监测站托管。距水站70多公里。建于2001年4月。",
+			"belong": "海河流域",
+			"date": "2018-01-02 ",
+			"time": "04:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [113.992777, 38.318334]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "北京门头沟沿河城",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "官厅水库出口",
+			"profile": "北京门头沟沿河城水质自动监测站位于北京市门头沟区沿河城村。点位坐标东经115度42分55秒，北纬40度4分10秒。海河水系，永定河流域（官厅水库出口），属于国控省界断面。由北京市环境保护监测中心托管，距离130公里。建于2001年1月。",
+			"belong": "海河流域",
+			"date": "2018-10-24",
+			"time": "19:12:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.715278, 40.069445]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山东聊城秤钩湾",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "豫冀鲁三省交界",
+			"profile": "山东聊城秤钩湾水质自动监测站位于河北省馆陶县内。点位坐标东经115度31分，北纬36度54分。属于海河流域，卫河:（豫冀鲁三省交界）。由聊城市环境保护监测站托管。距水站约60公里。建于2003年12月。",
+			"belong": "海河流域",
+			"date": "2019-04-23",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.516667, 36.9]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "天津三岔口",
+			"ph": "8.4211",
+			"phquality": "II",
+			"oxygen": "11.4303",
+			"oxygenquality": "II",
+			"nitrogen": "0.17",
+			"nitrogenquality": "II",
+			"permangan": "2.75",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "入海口",
+			"profile": "天津三岔口水质自动监测站位于天津市河北区平安街海河东岸。点位坐标东经117度11分21.9秒，北纬39度08分22.5秒。属于海河流域，海河干流（入海口）。由天津市环境监测中心托管，距水站15公里。建于2000年12月。",
+			"belong": "海河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.18941600000001, 39.139583]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "北京密云古北口",
+			"ph": "7.62",
+			"phquality": "Ⅰ",
+			"oxygen": "13.71",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.14",
+			"nitrogenquality": "Ⅰ",
+			"permangan": "1.32",
+			"permanganquality": "Ⅰ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "潮河（密云水库入口）",
+			"profile": "北京古北口水质自动监测站位于北京市密云县古北口镇电管站内。点位坐标经度117度17分，纬度40度47分。属于海河流域，潮河（密云水库入口）。由北京市环境保护监测中心托管。距离150公里。建于2000年11月。",
+			"belong": "海河流域",
+			"date": "2018-01-02 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.283333, 40.783333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "天津果河桥",
+			"ph": "8.43",
+			"phquality": "I",
+			"oxygen": "8.89",
+			"oxygenquality": "I",
+			"nitrogen": "0.1",
+			"nitrogenquality": "I",
+			"permangan": "0.84",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "于桥水库入口",
+			"profile": "天津果河桥水质自动监测站位于天津市蓟县西龙虎峪果河桥道班管理所院内。点位坐标东经117度44分54.2秒，北纬40度01分21.3秒；属于海河流域，黎河（于桥水库入口），上游为引滦进津河道，属于国控省界断面。由天津市环境监测中心托管，距水站170公里。建于2000年12月。",
+			"belong": "海河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.748389, 40.022583999999995]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽宿州杨庄",
+			"ph": "7.27",
+			"phquality": "II",
+			"oxygen": "7.85",
+			"oxygenquality": "II",
+			"nitrogen": "0.25",
+			"nitrogenquality": "II",
+			"permangan": "2.93",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "苏-皖省界",
+			"profile": "安徽宿州杨庄水质自动监测站位于宿州市杨庄乡伊桥村。点位坐标北纬34度03分43秒，东经117度13分12秒。属淮河流域，奎河（苏-皖省界）。由安徽省宿州环境监测站管理。距水站77公里。建于2006年12月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "07:58:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.22, 34.061944]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南永城黄口",
+			"ph": "8.71",
+			"phquality": "IV",
+			"oxygen": "12.28",
+			"oxygenquality": "IV",
+			"nitrogen": "0",
+			"nitrogenquality": "IV",
+			"permangan": "7.96",
+			"permanganquality": "IV",
+			"orgacarbon": "--",
+			"orgacarbonquality": "IV",
+			"section": "豫-皖省界",
+			"profile": "河南永城黄口水质自动监测站位于永城市黄口乡浍河闸北。点位坐标经纬度北纬33度56分，东经116度33分。属于淮河水系，浍河（豫-皖省界）。委托永城市环境监测站管理，距水站30公里。建于2006年12月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [116.55, 33.933333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏连云港大兴桥",
+			"ph": "8.25",
+			"phquality": "I",
+			"oxygen": "12",
+			"oxygenquality": "I",
+			"nitrogen": "0.14",
+			"nitrogenquality": "I",
+			"permangan": "--",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "鲁-苏省界",
+			"profile": "江苏连云港大兴桥水质自动监测站位于连云港市东海县南辰乡郑村。点位坐标东经118度42分，北纬34度42分。淮河流域，新沭河（鲁-苏省界）。由江苏连云港市环境监测中心站托管，距离80公里。建于2006年12月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "07:59:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.7, 34.7]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽亳州颜集",
+			"ph": "8.24",
+			"phquality": "III",
+			"oxygen": "5.55",
+			"oxygenquality": "III",
+			"nitrogen": "0.04",
+			"nitrogenquality": "III",
+			"permangan": "4.67",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "豫-皖省界",
+			"profile": "安徽亳州颜集水质自动监测站位于安徽亳州市颜集镇，点位坐标东经115度53分33.4秒，北纬33度58分63秒。属淮河流域，包河（豫-皖省界）。为省控断面。由亳州市环境监测站托管。距水站10余公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.89261099999999, 33.984167]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南信阳淮滨水文站",
+			"ph": "7.14",
+			"phquality": "III",
+			"oxygen": "7.8",
+			"oxygenquality": "III",
+			"nitrogen": "0.16",
+			"nitrogenquality": "III",
+			"permangan": "4.97",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "豫-皖省界",
+			"profile": "河南信阳淮滨水文站水质自动监测站位于信阳市淮滨县谷堆乡谷堆村东。点位坐标北纬32度24分268秒，东经115度31分572秒。属淮河流域，淮河干流（豫-皖省界）。委托河南省信阳市环境监测站管理。距水站170公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.675556, 32.474444]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏泗洪大屈",
+			"ph": "8.51",
+			"phquality": "II",
+			"oxygen": "9.89",
+			"oxygenquality": "II",
+			"nitrogen": "0.19",
+			"nitrogenquality": "II",
+			"permangan": "3.78",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "皖-苏省界",
+			"profile": "江苏泗洪大屈水质自动监测站位于泗洪县车门乡大屈庄。点位坐标北纬33度28分36秒，东经118度06分4秒。属淮河流域，新濉河（皖-苏省界），国控断面。由安徽省泗洪县环境监测站托管。距水站30公里。建于2006年10月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.10111099999999, 33.476667]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏徐州小红圈",
+			"ph": "7.77",
+			"phquality": "III",
+			"oxygen": "13.4",
+			"oxygenquality": "III",
+			"nitrogen": "0.21",
+			"nitrogenquality": "III",
+			"permangan": "4.86",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "鲁-苏省界",
+			"profile": "江苏徐州小红圈水质自动监测站位于邳州市（徐州市管辖的县级市）邹庄镇红圈村武河东岸。属淮河流域，武河（鲁-苏省界）。点位坐标北纬34度36分73秒，东经118度05分73秒。由江苏省徐州市环境监测中心站管理，距离邳州市区50公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.103611, 34.620278]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山东临沂涝沟桥",
+			"ph": "8.55",
+			"phquality": "III",
+			"oxygen": "14.71",
+			"oxygenquality": "III",
+			"nitrogen": "0.04",
+			"nitrogenquality": "III",
+			"permangan": "4.58",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "鲁-苏省界",
+			"profile": "山东临沂涝沟桥水质自动监测站位于郯城县花园乡。点位坐标北纬34度 29分9.7秒，东经118度09分53秒淮河流域，白马河（鲁-苏省界）。由郯城县环境监测站托，距水站35公里。建于2006年10月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.16472200000001, 34.486027]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽宿州泗县公路桥",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "皖-苏省界",
+			"profile": "安徽宿州泗县公路桥水质自动监测站位于宿州泗县，新汴河公路桥北岸下游50米处。点位坐标北纬33度27分47秒，东经117度52分56秒。属淮河流域，新汴河（皖-苏省界）。由安徽省宿州环境监测站管理。距水站100公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.88222300000001, 33.463056]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽阜阳徐庄",
+			"ph": "8.28",
+			"phquality": "II",
+			"oxygen": "10.1",
+			"oxygenquality": "II",
+			"nitrogen": "0.08",
+			"nitrogenquality": "II",
+			"permangan": "2.67",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "豫-皖省界",
+			"profile": "安徽阜阳徐庄水质自动监测站位于阜阳市临泉县城关镇徐庄。点位坐标北纬33度4分，东经115度14分。属淮河流域，泉河（豫-皖省界）。由阜阳市环境保护监测站托管。距水站70公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-01-11",
+			"time": "04:01:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.233333, 33.066667]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽阜阳张大桥",
+			"ph": "8.83",
+			"phquality": "I",
+			"oxygen": "8.57",
+			"oxygenquality": "I",
+			"nitrogen": "--",
+			"nitrogenquality": "I",
+			"permangan": "--",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "豫-皖省界",
+			"profile": "安徽阜阳张大桥水质自动监测站位于阜阳市太和县李兴镇张大桥。点位坐标北纬33度 4分33秒，东经115度14分50秒。属淮河流域，黑茨河（豫-皖省界）。由阜阳市环境保护测站托管。距水站105公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.24722200000001, 33.075834]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南信阳蒋集水文站",
+			"ph": "8.31349",
+			"phquality": "IV",
+			"oxygen": "14.2822",
+			"oxygenquality": "IV",
+			"nitrogen": "0.11172",
+			"nitrogenquality": "IV",
+			"permangan": "10",
+			"permanganquality": "IV",
+			"orgacarbon": "--",
+			"orgacarbonquality": "IV",
+			"section": "豫-皖省界",
+			"profile": "河南信阳蒋集水文站水质自动监测站位于信阳市固始县三河尖山乡。点位坐标东经115度51.672分，北纬32度28.703分。属淮河流域，史灌河（豫-皖省界）。由信阳市环境监测站托管。距离210公里。建于2006年12月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.8627, 32.478383]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏徐州李集桥",
+			"ph": "8.02",
+			"phquality": "IV",
+			"oxygen": "13.21",
+			"oxygenquality": "IV",
+			"nitrogen": "1.39",
+			"nitrogenquality": "IV",
+			"permangan": "0.01",
+			"permanganquality": "IV",
+			"orgacarbon": "--",
+			"orgacarbonquality": "IV",
+			"section": "苏-鲁省界",
+			"profile": "江苏徐州李集桥水质自动监测站位于徐州市沛县沛城镇李集村。点位坐标北纬34度45分2秒，东经117度00分43秒。属淮河流域，沿河（苏-鲁省界）。由江苏省徐州市环境监测中心站管理，距水站90公里。建于2007年1月。",
+			"belong": "淮河流域",
+			"date": "2018-12-31",
+			"time": "07:59:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.011944, 34.750556]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽阜阳王家坝",
+			"ph": "7.35",
+			"phquality": "Ⅰ",
+			"oxygen": "11.33",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.23",
+			"nitrogenquality": "Ⅱ",
+			"permangan": "3.50",
+			"permanganquality": "Ⅱ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "淮河干流（豫-皖省界）",
+			"profile": "安徽阜南王家坝水质自动监测站位于安徽省阜阳市阜南县王家坝镇。点位坐标东经115度36分14秒，北纬34度25分20秒。属于淮河流域，淮河干流（豫-皖省界）。由阜阳市环境保护监测站托管，距离水站80公里。建于2000年10月。",
+			"belong": "淮河流域",
+			"date": "2018-01-02 ",
+			"time": "08:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.603889, 34.422222999999995]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏盱眙",
+			"ph": "8.24",
+			"phquality": "II",
+			"oxygen": "6.5",
+			"oxygenquality": "II",
+			"nitrogen": "--",
+			"nitrogenquality": "II",
+			"permangan": "1.7",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "皖-苏省界",
+			"profile": "江苏盱眙淮河大桥水质自动监测站位于盱眙县淮河大桥。点位坐标东经118度29分42秒,北纬33度1分49秒。淮河流域，淮河干流（皖-苏省界），入洪泽湖。由盱眙县环境监测站托管。距水站5公里。建于2000年5月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:03:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.495, 33.030277999999996]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏邳苍",
+			"ph": "8.9",
+			"phquality": "III",
+			"oxygen": "18.88",
+			"oxygenquality": "III",
+			"nitrogen": "0.07",
+			"nitrogenquality": "III",
+			"permangan": "4.65",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "鲁-苏省界",
+			"profile": "江苏邳州邳苍艾山西大桥水质自动监测站位于江苏省邳州市艾山西大桥。点位坐标北纬34度 45分52秒，东经117度00分43秒。属于淮河流域，邳苍分洪道西偏泓（鲁-苏省界）。由邳州市环境监测站托管，距水站70公里。建于2000年10月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.011944, 34.764444]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽蚌埠蚌埠闸",
+			"ph": "7.68",
+			"phquality": "III",
+			"oxygen": "7.35",
+			"oxygenquality": "III",
+			"nitrogen": "--",
+			"nitrogenquality": "III",
+			"permangan": "4.1",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "闸上",
+			"profile": "安徽蚌埠蚌埠闸水质自动监测站位于蚌埠市水源水地蚌埠市第三自来水厂取水口。点位坐标东经117度14分32秒，北纬32度57分32秒。淮河流域，淮河干流（闸上）。由安徽省蚌埠市环境监测站托管，距水站距离10公里。建于2002年9月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.242222, 32.958889000000006]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽淮北小王桥",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "豫-皖省界",
+			"profile": "安徽淮北小王桥水质自动监测站位于安徽省淮北市。点位坐标东经116度35分33秒，北纬33度33分32秒。属淮河流域，沱河（豫-皖省界）。由淮北市环境监测中心站托管。距水站30余公里。建于2002年9月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [116.5925, 33.558889]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山东临沂清泉寺",
+			"ph": "8.55898",
+			"phquality": "III",
+			"oxygen": "13.1552",
+			"oxygenquality": "III",
+			"nitrogen": "0.04",
+			"nitrogenquality": "III",
+			"permangan": "5.92999",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "鲁-苏省界",
+			"profile": "山东临沂清泉寺水质自动监测站位于郯城县清泉寺闸。点位坐标东经118度28.725分，北纬34度42.051分。淮河流域，沭河干流（鲁-苏省界）。由郯城县环境监测站托管。距水站30公里。建于2002年11月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.47875, 42.70085]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南周口沈丘闸",
+			"ph": "7.85247",
+			"phquality": "II",
+			"oxygen": "9.80058",
+			"oxygenquality": "II",
+			"nitrogen": "0.36",
+			"nitrogenquality": "II",
+			"permangan": "3.75",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "闸上",
+			"profile": "河南周口沈丘闸水质自动监测站位于河南省周口市沈丘县槐店闸。点位坐标东经115度4分14.5秒，北纬33度23分14秒。属于淮河流域，在沙河（闸上）。该站由周口市环境监测站托管。距离75公里。建于2002年12月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.070695, 33.387222]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南驻马店班台",
+			"ph": "7.52",
+			"phquality": "II",
+			"oxygen": "7.97",
+			"oxygenquality": "II",
+			"nitrogen": "0.12",
+			"nitrogenquality": "II",
+			"permangan": "3.61",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "豫-皖省界",
+			"profile": "河南驻马店班台水质自动监测站位于河南驻马店新蔡县东部偏南。点位坐标东经115度8分40.8秒，北纬32度39分13.8秒。属淮河流域，洪汝河（豫-皖省界）。由驻马店市环境监测站托管。距水站约150公里。建于2002年12月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.14466599999999, 32.653833]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山东枣庄台儿庄",
+			"ph": "7.81",
+			"phquality": "III",
+			"oxygen": "7.91",
+			"oxygenquality": "III",
+			"nitrogen": "0.09",
+			"nitrogenquality": "III",
+			"permangan": "4.23",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "鲁-苏省界",
+			"profile": "山东枣庄台儿庄大桥水质自动监测站位于台儿庄宏运航运管理所。点位坐标北纬34度32分，东经117度45分。属淮河流域，京杭大运河上（鲁-苏省界）。由枣庄市环境监测站托管。距水站约80公里。建于2003年6月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.75, 34.533333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽界首七渡口",
+			"ph": "8.75",
+			"phquality": "III",
+			"oxygen": "9.15",
+			"oxygenquality": "III",
+			"nitrogen": "--",
+			"nitrogenquality": "III",
+			"permangan": "4.5",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "豫-皖省界",
+			"profile": "安徽界首七渡口水质自动监测站位于界首市西城办事处张庄社区，建在界首市环境监测站院内。点位坐标东经115度20分03秒，北纬33度16分35秒。淮河流域，颖河（豫-皖省界）。由阜阳市环境保护监测站托管，距离水站75公里。建于2001年1月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.334166, 33.276388999999995]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽淮南石头埠",
+			"ph": "8.08949",
+			"phquality": "II",
+			"oxygen": "10.5533",
+			"oxygenquality": "II",
+			"nitrogen": "0.39",
+			"nitrogenquality": "II",
+			"permangan": "3.43",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "安徽淮南石头埠水质自动监测站位于淮南市湖滨路第三自来水厂院内。点位坐标东经116度59分46秒,北纬23度40分10秒。淮河流域，淮河干流，国控省界断面。由安徽省淮南市环境监测站托管，距离1公里。建于2001年1月。",
+			"belong": "淮河流域",
+			"date": "2019-01-20",
+			"time": "20:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [116.996111, 23.669445]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南周口鹿邑付桥闸",
+			"ph": "9.2",
+			"phquality": "劣V",
+			"oxygen": "18.6",
+			"oxygenquality": "劣V",
+			"nitrogen": "0.01",
+			"nitrogenquality": "劣V",
+			"permangan": "5.97",
+			"permanganquality": "劣V",
+			"orgacarbon": "--",
+			"orgacarbonquality": "劣V",
+			"section": "豫-皖省界",
+			"profile": "河南周口鹿邑付桥闸水质自动监测站位于河南省周口市鹿邑付桥闸。点位坐标东经115度29分26.5秒，北纬33度52分55.8秒。属于淮河流域，涡河（豫-皖省界）。为国控省界断面。由周口市环境监测站托管。距水站约100公里。建于2000年12月。",
+			"belong": "淮河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [115.490694, 33.882167]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山东临沂重坊桥",
+			"ph": "7.60999",
+			"phquality": "III",
+			"oxygen": "10.0675",
+			"oxygenquality": "III",
+			"nitrogen": "0.08964",
+			"nitrogenquality": "III",
+			"permangan": "4.29",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "鲁-苏省界",
+			"profile": "山东临沂重坊桥水质自动监测站位于郯城县重坊镇。点位坐标北纬34度36分38秒，东经118度08分46秒。淮河流域，沂河（鲁-苏省界）。由郯城县环境监测站托管，距水站30公里。建于2006年10月。",
+			"belong": "淮河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.14611099999999, 34.610556]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽滁州小柳巷",
+			"ph": "7.92",
+			"phquality": "II",
+			"oxygen": "9.71",
+			"oxygenquality": "II",
+			"nitrogen": "0.2",
+			"nitrogenquality": "II",
+			"permangan": "3.12",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "皖-苏省界",
+			"profile": "安徽滁州小柳巷水质自动监测站位于滁州市辖明光市柳巷乡。点位坐标北纬32度9分55秒，东经117度08分0秒。淮河流域，淮河干流（皖-苏省界）。由滁州市环境监测站托管。距水站120公里。建于2006年11月。",
+			"belong": "淮河流域",
+			"date": "2019-05-01",
+			"time": "11:59:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.133333, 32.165278]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "昆明观音山",
+			"ph": "8.88",
+			"phquality": "Ⅰ",
+			"oxygen": "8.39",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.54",
+			"nitrogenquality": "Ⅲ",
+			"permangan": "10.23",
+			"permanganquality": "Ⅴ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "湖体（外海）",
+			"profile": "明观音山水质自动监测站位昆明市工人疗养院内。点位坐标东经102度39分97秒，北纬24度51分35秒。滇池水系，湖体（外海）。由昆明市环境监测中心站托管。距离20多公里。建于2002年12月。",
+			"belong": "滇池流域",
+			"date": "2018-01-02 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [102.676944, 24.859722]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "昆明西苑隧道",
+			"ph": "8.26",
+			"phquality": "Ⅰ",
+			"oxygen": "8.62",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.59",
+			"nitrogenquality": "Ⅲ",
+			"permangan": "7.09",
+			"permanganquality": "Ⅳ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "湖体（草海）",
+			"profile": "昆明西苑隧道水质自动监测站位昆明市苏家村西苑隧道入口处。点位坐标东经102度38分14.42秒，北纬24度58分13.02秒。属于滇池水系，湖体（草海），为国控省界断面。由昆明市环境监测中心站托管，距离10多公里。建于2001年12月。",
+			"belong": "滇池流域",
+			"date": "2018-01-02 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [102.637339, 24.970284]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广西梧州界首",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "桂-粤省界",
+			"profile": "广西梧州界首水质自动监测站位于广西省梧州市城东镇思扶村。点位坐标东经111度25分25秒,北纬23度28分05秒。珠江流域，浔江（桂-粤省界），国控断面。由梧州市环境保护监测站托管。距离15公里。建于2001年3月。",
+			"belong": "珠江流域",
+			"date": "2018-12-14",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [111.42361100000001, 23.468056]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广西南宁老口",
+			"ph": "7.37065",
+			"phquality": "II",
+			"oxygen": "8.0675",
+			"oxygenquality": "II",
+			"nitrogen": "0.19638",
+			"nitrogenquality": "II",
+			"permangan": "0.86824",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "广西南宁老口水质自动监测站位于南宁市罗文园艺厂内。点位坐标东经108度75分,北纬22度46分57秒。属珠江流域，邕江，国控对照断面。由南宁市环境监测站托管。距离35公里。建于2001年3月。",
+			"belong": "珠江流域",
+			"date": "2019-02-20",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [109.256111, 22.7825]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广西贵港石嘴",
+			"ph": "7.97908",
+			"phquality": "II",
+			"oxygen": "8.59167",
+			"oxygenquality": "II",
+			"nitrogen": "0.12",
+			"nitrogenquality": "II",
+			"permangan": "2.1",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "广西贵港石嘴水质自动监测站位于贵港市石嘴镇河面运输社旁。点位坐标东经109度51分55秒，北纬22度52分02秒。属珠江流域，浔江，属省控监测断面。由贵港市环境监测站托管。距离60公里。建于200年11月。",
+			"belong": "珠江流域",
+			"date": "2019-02-19",
+			"time": "20:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [109.86527799999999, 22.867223]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广西凭祥平而关",
+			"ph": "7.60767",
+			"phquality": "I",
+			"oxygen": "9.16545",
+			"oxygenquality": "I",
+			"nitrogen": "0.03",
+			"nitrogenquality": "I",
+			"permangan": "--",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "越-中国界",
+			"profile": "广西凭祥平而关水质自动监测站位于越凭祥市白云镇平而村的广西边防武警平而关工作站旁。点位坐标东经106度30分75秒，北纬22度10分59秒。珠江流域，平而河（入国境）。由凭祥市环境监测站托管。距离约30公里。建于2002年12月。",
+			"belong": "珠江流域",
+			"date": "2019-02-20",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [106.520833, 22.183056]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广东清远七星岗",
+			"ph": "7.67292",
+			"phquality": "III",
+			"oxygen": "8.37345",
+			"oxygenquality": "III",
+			"nitrogen": "0.46761",
+			"nitrogenquality": "III",
+			"permangan": "4.13",
+			"permanganquality": "III",
+			"orgacarbon": "20",
+			"orgacarbonquality": "III",
+			"section": "",
+			"profile": "广东清远七星岗水质自动监测站位于清远市自来水水厂内。点位坐标东经113度04分01秒,北纬23度41分00秒。珠江水系，北江，属于国控省界断面。由清远市环境监测站托管。距离3公里。建于2000年12月。",
+			"belong": "珠江流域",
+			"date": "2019-02-20",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [113.06694499999999, 23.683333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广东广州长州",
+			"ph": "6.69",
+			"phquality": "Ⅰ",
+			"oxygen": "1.78",
+			"oxygenquality": "劣Ⅴ",
+			"nitrogen": "0.40",
+			"nitrogenquality": "Ⅱ",
+			"permangan": "4.46",
+			"permanganquality": "Ⅲ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "珠江",
+			"profile": "广州长洲水质自动监测站位于广州市下属番禺区新造镇原新造水厂。点位坐标东经113度24分25秒，北纬23度02分15秒。珠江流域，珠江（干流），属于市控断面。由广州市环境监测中心站托管。距离约35公里。建于2000年12月。",
+			"belong": "珠江流域",
+			"date": "2013-11-08 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [113.40694400000001, 23.037499999999998]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广西桂林阳朔",
+			"ph": "7.39",
+			"phquality": "II",
+			"oxygen": "9.69",
+			"oxygenquality": "II",
+			"nitrogen": "--",
+			"nitrogenquality": "II",
+			"permangan": "2.28",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "广西桂林阳朔水质自动监测站位于桂林阳朔码头。点位坐标东经110度29分50秒，北纬24度70分20秒。珠江流域，漓江。由桂林市环境监测中心站托管，距离60公里。建于2003年7月。",
+			"belong": "珠江流域",
+			"date": "2019-02-20",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [110.49722200000001, 25.172223]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "广东中山横栏",
+			"ph": "7.75",
+			"phquality": "I",
+			"oxygen": "7.73",
+			"oxygenquality": "I",
+			"nitrogen": "0.02026",
+			"nitrogenquality": "I",
+			"permangan": "1.06",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "入海口",
+			"profile": "广东中山横栏水质自动监测站位于中山市横栏六沙指南水闸上游1公里。点位坐标东经113度12分94秒，北纬22度30分65秒 。属珠江流域，西江(入海口)。由中山市环境监测站管理，距离22.5公里，建于2004年7月。",
+			"belong": "珠江流域",
+			"date": "2019-02-20",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [113.226111, 22.518056]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "云南红河州河口",
+			"ph": "8.15",
+			"phquality": "I",
+			"oxygen": "7.84",
+			"oxygenquality": "I",
+			"nitrogen": "0.08",
+			"nitrogenquality": "I",
+			"permangan": "1.8",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "中-越出境",
+			"profile": "云南红河州河口水质自动监测站位于红河哈尼族彝族自治州河口县城内。点位坐标东经103度57分24.2秒，北纬22度30分31.7秒。属西南诸河，红河（出国境）断面。.由红河州环境监测站托管，距离红河州170公里。建于2005年12月。",
+			"belong": "西南诸河",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [103.956722, 22.508806]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "云南西双版纳橄榄坝",
+			"ph": "7.59",
+			"phquality": "劣V",
+			"oxygen": "7.53",
+			"oxygenquality": "劣V",
+			"nitrogen": "2.54",
+			"nitrogenquality": "劣V",
+			"permangan": "1.5",
+			"permanganquality": "劣V",
+			"orgacarbon": "--",
+			"orgacarbonquality": "劣V",
+			"section": "中-缅出境",
+			"profile": "云南西双版纳橄榄坝水质自动监测站位于景洪市景哈乡澜沧江右岸。点位坐标东经100度55分，北纬21度51分。 属澜沧江流域，澜沧江（出国境）。由西双版纳州环境监测站托管。距离32公里。建于2003年12月。",
+			"belong": "西南诸河",
+			"date": "2019-03-15",
+			"time": "08:01:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [100.916667, 21.85]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "辽宁抚顺大伙房水库",
+			"ph": "7.14",
+			"phquality": "II",
+			"oxygen": "11.2",
+			"oxygenquality": "II",
+			"nitrogen": "0.12",
+			"nitrogenquality": "II",
+			"permangan": "3.09",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "库体",
+			"profile": "辽宁抚顺大伙房水库水质自动监测站位于辽宁省抚顺市抚顺县大伙房水库管理局暗渠上的流量观测站内。点位坐标东经124度22分8秒，北纬41度53分25秒。所属辽河流域，浑河水系，大伙房水库（库体）。由抚顺市环境保护监测站托管。距抚顺市20公里。建于2002年9月。",
+			"belong": "辽河流域",
+			"date": "2019-05-05",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [124.36888900000001, 41.890277]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "辽宁营口辽河公园",
+			"ph": "7.84",
+			"phquality": "IV",
+			"oxygen": "8.27",
+			"oxygenquality": "IV",
+			"nitrogen": "--",
+			"nitrogenquality": "IV",
+			"permangan": "7.47",
+			"permanganquality": "IV",
+			"orgacarbon": "--",
+			"orgacarbonquality": "IV",
+			"section": "入海口",
+			"profile": "辽宁营口辽河公园水质自动监测站位于营口市辽河公园内。点位坐标东经122度13分54.35秒,北纬40度40分42.8秒。属于辽河流域，大辽河（入海口），属国控断面。由营口市环境监测站托管，距离2公里左右。建于2001年4月。",
+			"belong": "辽河流域",
+			"date": "2019-05-05",
+			"time": "16:05:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [122.227778, 40.67855599999999]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "辽宁丹东鸭绿江桥",
+			"ph": "7.15",
+			"phquality": "I",
+			"oxygen": "9.21",
+			"oxygenquality": "I",
+			"nitrogen": "0.05",
+			"nitrogenquality": "I",
+			"permangan": "--",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "中、朝界河",
+			"profile": "辽宁丹东江桥水质自动监测站位于辽宁省丹东市振安区太平前街水厂内。点位坐标东经124度26分12秒，北纬40度9分30秒。属于辽河流域，鸭绿江（国界），中朝界河国界断面。由丹东市环境保护监测站托管。距监测站10公里。建于2003年12月。",
+			"belong": "辽河流域",
+			"date": "2019-05-04",
+			"time": "00:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [124.436666, 40.158333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "辽宁辽阳汤河水库",
+			"ph": "8.18486",
+			"phquality": "II",
+			"oxygen": "9.73578",
+			"oxygenquality": "II",
+			"nitrogen": "0.14235",
+			"nitrogenquality": "II",
+			"permangan": "2.39",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "库体",
+			"profile": "辽宁辽阳汤河水库水质自动监测站位于辽宁省辽阳市宫长岭区柳河镇辽化水厂内。点位坐标东经123度241分17秒，北纬41度6分39秒。属于辽河流域，汤河水库（库体）。由辽阳市环境监测站托管。距辽阳市区40公里。建于2003年9月。",
+			"belong": "辽河流域",
+			"date": "2019-03-15",
+			"time": "04:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [127.021389, 41.110833]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "辽宁铁岭朱尔山",
+			"ph": "7.39",
+			"phquality": "V",
+			"oxygen": "2.16",
+			"oxygenquality": "V",
+			"nitrogen": "0.33",
+			"nitrogenquality": "V",
+			"permangan": "5.5",
+			"permanganquality": "V",
+			"orgacarbon": "--",
+			"orgacarbonquality": "V",
+			"section": "",
+			"profile": "辽宁铁岭珠尔山水质自动监测站位于辽宁省铁岭市铁岭县新台子镇珠尔山村，北纬42度12分36秒，东经123度33分。属于辽河流域，辽河干流上，国控省界断面。由铁岭市环境监测站托管。距铁岭市30公里。建于2000年12月。 该站部分仪器正在改造更新。",
+			"belong": "辽河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [123.55,42.21]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "辽宁盘锦兴安",
+			"ph": "8.11",
+			"phquality": "III",
+			"oxygen": "7.37",
+			"oxygenquality": "III",
+			"nitrogen": "0.25",
+			"nitrogenquality": "III",
+			"permangan": "4.39",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "入海口",
+			"profile": "辽宁盘锦兴安水质自动监测站位于辽宁省盘锦市盘山县吴家乡兴安屯村旁，毗邻辽河油田冷家作业区，点位坐标北纬41度11分，东经122度17分。属于辽河流域，在辽河干流上（入海口）。由盘锦市环境保护监测站托管，距离20公里。建于2000年12月。",
+			"belong": "辽河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [122.283333, 41.183333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "四川广元清风峡",
+			"ph": "7.88",
+			"phquality": "I",
+			"oxygen": "10.32",
+			"oxygenquality": "I",
+			"nitrogen": "--",
+			"nitrogenquality": "I",
+			"permangan": "1.67",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "陕-川省界",
+			"profile": "四川广元清风峡水质自动监测站位于广元市朝天区清风村。长江流域，嘉陵江（陕-川省界）。点位坐标东经105度52分43秒，北纬32度39分57秒。由广元市环境监测站托管，距离34公里。建于2005年12月。",
+			"belong": "长江流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [105.878611, 32.665833]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "重庆朱沱",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "川-渝省界",
+			"profile": "重庆朱沱水质自动监测站位于重庆市永川区朱沱镇镇政府内。点位坐标东经105度50分56.3秒，北纬29度00分55.2秒。长江流域，长江干流（川-渝省界），属于国控省界断面。由重庆市环境监测中心托管，距离200公里左右。建于2000年7月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [105.84897199999999, 29.015333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏南京林山",
+			"ph": "7.88252",
+			"phquality": "I",
+			"oxygen": "9.64143",
+			"oxygenquality": "I",
+			"nitrogen": "0.07",
+			"nitrogenquality": "I",
+			"permangan": "1.59",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "皖-苏省界",
+			"profile": "江苏南京林山水质自动监测站位于江苏省南京市蒲口区桥林镇。点位坐标东经118度31分26秒，北纬31度53分11秒。属于长江流域，长江干流，（皖-苏省界）。该站由南京市环境监测中心站托管。距离50公里。建于2000年11月。",
+			"belong": "长江流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [118.523889, 31.886389]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "湖南岳阳城陵矶",
+			"ph": "8.62",
+			"phquality": "II",
+			"oxygen": "7.83",
+			"oxygenquality": "II",
+			"nitrogen": "0.35",
+			"nitrogenquality": "II",
+			"permangan": "--",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "湖南岳阳城陵矶水质自动监测站位于岳阳市郊成陵矶岳化水厂。点位坐标东经113度13分33.97秒，北纬29度32分25.45秒。属长江水系，长江（干流），属于国控省界断面。由岳阳市环境监测中心站托管，距离30余公里。建于2000年11月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [113.226103, 29.540402]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "湖南岳阳岳阳楼",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "湖体（出口）",
+			"profile": "湖南岳阳岳阳楼水质自动监测站位于岳阳市城西区西北侧洞庭湖氨肥水厂，点位坐标东经113度05分19秒，北纬29度23分34秒。长江流域，洞庭湖出口。由岳阳市环境监测站托管。距离为25公里。建于2002年9月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [113.088611, 29.392777]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "四川宜宾凉姜沟",
+			"ph": "7.2",
+			"phquality": "II",
+			"oxygen": "7.4",
+			"oxygenquality": "II",
+			"nitrogen": "0.19",
+			"nitrogenquality": "II",
+			"permangan": "2.42",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "入长江前",
+			"profile": "四川宜宾凉姜沟水质自动监测站位于宜宾市岷江高速公路大桥下游,距岷江、金沙江汇合口1公里处。点位坐标东经104度36分，北纬28度47分。长江流域，岷江（入长江前）。由宜宾市环境监测站托管。距离4公里。建于2002年11月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [104.6, 28.783333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江西九江蛤蟆石",
+			"ph": "6.96",
+			"phquality": "III",
+			"oxygen": "5.97",
+			"oxygenquality": "III",
+			"nitrogen": "0.08",
+			"nitrogenquality": "III",
+			"permangan": "2.46",
+			"permanganquality": "III",
+			"orgacarbon": "--",
+			"orgacarbonquality": "III",
+			"section": "湖体（出口）",
+			"profile": "江西九江蛤蟆石水质自动监测站位于姑潭镇蛤蟆石。点位坐标东经116度07分，北纬29度31分。属长江流域：鄱阳湖出口。由九江市环境监测站托管。距离40余公里。建于2002年10月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [116.116667, 29.516666999999998]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江苏扬州三江营",
+			"ph": "7.98",
+			"phquality": "劣V",
+			"oxygen": "8.26",
+			"oxygenquality": "劣V",
+			"nitrogen": "2.56",
+			"nitrogenquality": "劣V",
+			"permangan": "4.21",
+			"permanganquality": "劣V",
+			"orgacarbon": "--",
+			"orgacarbonquality": "劣V",
+			"section": "南水北调东线取水口",
+			"profile": "江苏扬州三江营水质自动监测站位于江都市夹江佘坂渡口南侧100米，在夹江大堤的丁字坝上。点位坐标东经119度39.253分，北纬32度21.078分。长江流域，夹江（南水北调取水口）。由扬州市环境监测中心站托管。距离40余公里。建于2002年10月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [119.654217, 32.3513]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "湖南长沙新港",
+			"ph": "7.23434",
+			"phquality": "II",
+			"oxygen": "9.39823",
+			"oxygenquality": "II",
+			"nitrogen": "0.1",
+			"nitrogenquality": "II",
+			"permangan": "2.1",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "入洞庭湖",
+			"profile": "湖南长沙新港水质自动监测站位于湖南省长沙市湘江长沙段下游长沙市望城水厂。点位坐标东经112度50分16秒，北纬28度20分28秒。属长江流域：湘江（洞庭湖入口）。由长沙市环境监测中心站托管，距离为35公里。建于2002年9月。",
+			"belong": "长江流域",
+			"date": "2019-03-15",
+			"time": "04:02:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [112.837777, 28.341110999999998]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "四川泸州陀江二桥",
+			"ph": "7.93",
+			"phquality": "Ⅰ",
+			"oxygen": "10.12",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "-",
+			"nitrogenquality": "-",
+			"permangan": "1.87",
+			"permanganquality": "Ⅰ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "沱江（入长江前）",
+			"profile": "四川泸州沱江二桥水质自动监测站位于泸州市市区连江路铁灯杆4号楼2单元1号。点位坐标东经105度26分，北纬28度54分。长江流域，沱江（入长江前）。由泸州市环境保护监测站托管。距离8公里。建于2002年12月。",
+			"belong": "长江流域",
+			"date": "2018-01-02 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [105.433333, 28.9]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "四川乐山岷江大桥",
+			"ph": "7.18",
+			"phquality": "II",
+			"oxygen": "6.73",
+			"oxygenquality": "II",
+			"nitrogen": "0.3",
+			"nitrogenquality": "II",
+			"permangan": "3.01",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "与大渡河汇合前",
+			"profile": "四川乐山岷江大桥水质自动监测站位于四川省乐山市中心城区滨河路。点位坐标东经103度46分4.3秒，北纬29度34分27.6秒。长江流域，岷江（与大渡河汇合前）。由乐山市环境监测站托管。距离10公里。建于2002年11月。",
+			"belong": "长江流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [103.767861, 29.574334]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "湖北丹江口",
+			"ph": "7.62",
+			"phquality": "Ⅰ",
+			"oxygen": "9.07",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "-",
+			"nitrogenquality": "-",
+			"permangan": "2.21",
+			"permanganquality": "Ⅱ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "丹江口水库（库体）",
+			"profile": "湖北丹江口胡家岭水质自动监测站位于丹江口市胡家岭丹江口水库边上。点位坐标东经111度30分08秒，北纬32度33分59秒。属长江流域，丹江口水库（库体）。由丹江口市环境监测站托管，距离3公里。建于2002年12月。",
+			"belong": "长江流域",
+			"date": "2018-01-02 ",
+			"time": "04:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [111.502222, 32.566388999999994]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "江西南昌滁槎",
+			"ph": "6.38",
+			"phquality": "II",
+			"oxygen": "6.96",
+			"oxygenquality": "II",
+			"nitrogen": "0.42",
+			"nitrogenquality": "II",
+			"permangan": "2.28",
+			"permanganquality": "II",
+			"orgacarbon": "2.07515",
+			"orgacarbonquality": "II",
+			"section": "入鄱阳湖",
+			"profile": "江西南昌滁槎水质自动监测站位于南昌市高新技术产业开发区昌东镇滁槎。点位坐标东经116度05分，北纬28度46分。长江流域，赣江（鄱阳湖入口）。由南昌市环境监测站托管。距离30余公里，建于2002年10月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [116.083333, 28.766666999999998]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "四川攀枝花龙洞",
+			"ph": "8.11",
+			"phquality": "I",
+			"oxygen": "9.95",
+			"oxygenquality": "I",
+			"nitrogen": "0.09",
+			"nitrogenquality": "I",
+			"permangan": "1.47",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "",
+			"profile": "四川攀枝花龙洞水质自动监测站位于四川省攀枝花市格里坪镇马上坪攀钢公司电厂江边水泵房金沙江取水口。点位坐标东经101度30.386分，北纬26度35.843分。属于长江水系，长江（干流），国控省界断面。由攀枝花市环境保护监测站托管，距离50公里。建于2001年3月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [101.506433, 26.597333]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "湖北宜昌南津关",
+			"ph": "8",
+			"phquality": "I",
+			"oxygen": "7.68",
+			"oxygenquality": "I",
+			"nitrogen": "0.06",
+			"nitrogenquality": "I",
+			"permangan": "1.45",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "三峡水库出口",
+			"profile": "湖北宜昌南津关水质自动监测站位于长江边的桃花村风景区内。点位坐标东经111度16分14.42秒,北纬30度45分49.72秒。长江流域，长江干流（三峡水库出口），南水北调中线调水源头，属于国控省界断面。由宜昌市环保监测站托管。距离15km。建于2001年1月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [111.27499999999999, 30.763811]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "安徽安庆皖河口",
+			"ph": "7.67",
+			"phquality": "II",
+			"oxygen": "7.27",
+			"oxygenquality": "II",
+			"nitrogen": "0.12",
+			"nitrogenquality": "II",
+			"permangan": "1.81",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "安徽安庆皖河口水质自动监测站位于安庆市区内长江北岸。地理坐标北纬30°30′17″，东经117°01′34″。属长江流域，长江干流。国控皖河口断面。由安庆市环境监测中心站托管，距离8公里。建于2001年1月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.025, 30.5047]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南南阳陶岔",
+			"ph": "8.09763",
+			"phquality": "II",
+			"oxygen": "11.5335",
+			"oxygenquality": "II",
+			"nitrogen": "0.02314",
+			"nitrogenquality": "II",
+			"permangan": "2.16",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "南水北调中线取水口",
+			"profile": "河南南阳陶岔水质自动监测站位于南阳市锗川县九重镇陶岔村。点位坐标东经111度42分19秒，北纬32度40分09秒。属长江流域.，南水北调中线取水口。委托南阳市环境保护监测站管理。距离100公里。建于2003-年2月。",
+			"belong": "长江流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [111.705278, 32.669166999999995]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "湖北武汉宗关",
+			"ph": "6.98",
+			"phquality": "II",
+			"oxygen": "9.58",
+			"oxygenquality": "II",
+			"nitrogen": "0.28",
+			"nitrogenquality": "II",
+			"permangan": "3.12",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "入长江前",
+			"profile": "湖北武汉宗关水质自动监测站位于武汉市宗关自来水厂。点位坐标东经114度20分，北纬30度37分。为长江水系，汉江（入长江前），属于国控省界断面。该站由武汉市环境监测中心站托管，距离为16公里。建于2001年1月。",
+			"belong": "长江流域",
+			"date": "2019-05-05",
+			"time": "16:03:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [114.333333, 30.616667]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "河南济源小浪底",
+			"ph": "8.43",
+			"phquality": "I",
+			"oxygen": "--",
+			"oxygenquality": "I",
+			"nitrogen": "--",
+			"nitrogenquality": "I",
+			"permangan": "1.7",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "水库出口",
+			"profile": "河南济源小浪底水质自动监测站位于济源市小浪底水库大坝下游3公里。点位坐标东经112度24分2.3秒,北纬34度55分17.7秒。属于黄河干流，是小浪底水库的出口。由济源市环境监测站托管，距离35公里。建于2000年12月。",
+			"belong": "黄河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [112.40944400000001, 34.921583999999996]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山西忻州万家寨",
+			"ph": "8.31",
+			"phquality": "II",
+			"oxygen": "8.5",
+			"oxygenquality": "II",
+			"nitrogen": "0.39",
+			"nitrogenquality": "II",
+			"permangan": "2.72",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "库体",
+			"profile": "山西忻州万家寨水库水质自动监测站位于黄河万家寨水库大坝上方风景区。点位坐标东经111度55分52秒,北纬39度34分46秒。属黄河流域，万家寨水库（库体）。由忻州市环境监测站托管.。距离280余公里。建于2002年9月。",
+			"belong": "黄河流域",
+			"date": "2019-05-05",
+			"time": "16:06:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [111.931111, 39.579445]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "宁夏吴忠新墩",
+			"ph": "8.02",
+			"phquality": "Ⅰ",
+			"oxygen": "10.68",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.06",
+			"nitrogenquality": "Ⅰ",
+			"permangan": "2.10",
+			"permanganquality": "Ⅱ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "黄河干流（甘-宁省界）",
+			"profile": "宁夏中卫新墩水质自动监测站位于宁夏回族自治区中卫市下河沿断面左侧河岸。点位坐标东经37度27分，北纬105度02分。黄河流域，黄河干流（甘-宁省界）。该站由中卫市环境监测站托管。距离10公里。建于2002年10月。",
+			"belong": "黄河流域",
+			"date": "2018-01-02 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [105.033333,37.45]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "内蒙古包头画匠营子",
+			"ph": "8.13364",
+			"phquality": "II",
+			"oxygen": "11.2315",
+			"oxygenquality": "II",
+			"nitrogen": "0.06864",
+			"nitrogenquality": "II",
+			"permangan": "3.15709",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "",
+			"profile": "内蒙包头画匠营子水质自动监测站位于包头市万水泉镇画匠营子村水厂采水口。点位坐标东经106度54分35秒，北纬40度31分54秒。黄河水系，黄河（干流），属于国控省界断面。由包头市环境监测站托管，距离30公里。建于2001年4月。",
+			"belong": "黄河流域",
+			"date": "2019-03-15",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [106.909722, 40.531667]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "甘肃兰州新城桥",
+			"ph": "7.44",
+			"phquality": "I",
+			"oxygen": "9.28",
+			"oxygenquality": "I",
+			"nitrogen": "0.07",
+			"nitrogenquality": "I",
+			"permangan": "1.92",
+			"permanganquality": "I",
+			"orgacarbon": "--",
+			"orgacarbonquality": "I",
+			"section": "",
+			"profile": "甘肃兰州新城桥水质自动监测站位于兰州市西固区，建在兰州市第一自来水厂区内。点位坐标东经103度35分02秒,北纬36度07分20秒。黄河水系（黄河干流），国控省界断面。由兰州市环境监测站托管。距离35公里。建于2001年3月。",
+			"belong": "黄河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [103.583889, 36.122223]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山西运城河津大桥",
+			"ph": "--",
+			"phquality": "--",
+			"oxygen": "--",
+			"oxygenquality": "--",
+			"nitrogen": "--",
+			"nitrogenquality": "--",
+			"permangan": "--",
+			"permanganquality": "--",
+			"orgacarbon": "--",
+			"orgacarbonquality": "--",
+			"section": "晋-晋、陕省界（入黄前）",
+			"profile": "山西运城河津大桥水质自动监测站位于山西省运城地区河津市柴家乡苍底村汾河河津大桥旁。点位坐标东经111度42分2秒，北纬34度33分19秒。属于黄河水系（汾河干流），汾河（入黄河前），为国控省界断面。由运城市汾河河津大桥水质自动监测站托管，距离约80公里。建于2001年1月。",
+			"belong": "黄河流域",
+			"date": "2019-03-08",
+			"time": "08:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [111.700556, 34.555277999999994]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "山东济南泺口",
+			"ph": "8.54",
+			"phquality": "II",
+			"oxygen": "8.43",
+			"oxygenquality": "II",
+			"nitrogen": "0.15",
+			"nitrogenquality": "II",
+			"permangan": "2.11",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "入海口",
+			"profile": "山东济南泺口水质自动监测站位于济南市泺路北首黄河大坝泺口水文站院内。点位坐标东经117度00分47.6秒，北纬36度46分1.9秒。属于黄河流域，黄河干流（入海口），由济南市环境保护监测站托管，距里15公里。建于2001年4月。",
+			"belong": "黄河流域",
+			"date": "2019-05-05",
+			"time": "16:00:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [117.013222, 36.767195]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "内蒙古乌海海渤湾",
+			"ph": "8.08",
+			"phquality": "Ⅰ",
+			"oxygen": "10.07",
+			"oxygenquality": "Ⅰ",
+			"nitrogen": "0.39",
+			"nitrogenquality": "Ⅱ",
+			"permangan": "3.70",
+			"permanganquality": "Ⅱ",
+			"orgacarbon": "null",
+			"orgacarbonquality": "null",
+			"section": "黄河干流（宁-蒙省界）",
+			"profile": "内蒙乌海海勃湾水质自动监测站位于乌海市海勃湾区扬水站旁。点位坐标东经106度55分38秒，北纬39度23分46秒。黄河流域，干流（宁-蒙省界）。该站由乌海市环境监测中心站托管。距离10公里。建于2002年10月。",
+			"belong": "黄河流域",
+			"date": "2018-01-02 ",
+			"time": "12:00:00 "
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [106.927223, 39.396111]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"name": "陕西渭南潼关吊桥",
+			"ph": "7.99",
+			"phquality": "II",
+			"oxygen": "6.47",
+			"oxygenquality": "II",
+			"nitrogen": "0.4",
+			"nitrogenquality": "II",
+			"permangan": "1.86",
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "陕-晋、豫省界（入黄前）",
+			"profile": "陕西渭南潼关吊桥水质自动监测站位于陕西省渭南市潼关县四知村渡口。点位坐标东经110度13.45分北纬34度36.8分。属于黄河流域，渭河（入黄河前）。由渭南市环境保护监测站托管，距离约80米。建于2004年9月。",
+			"belong": "黄河流域",
+			"date": "2019-05-05",
+			"time": "17:32:00"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [110.224167,34.613333]
+		}
+	}]
+}

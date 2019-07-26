@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="../dist/mapbox-gl-dev.js"></script>
+    <link href='../dist/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #map {
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <style type='text/css'>
+        #info {
+		display: block;
+		position: relative;
+		margin: 0px auto;
+		width: 50%;
+		padding: 10px;
+		border: none;
+		border-radius: 3px;
+		font-size: 12px;
+		text-align: center;
+		color: #222;
+		background: #fff;
+		}
+        /* <link href='dist/layerMenu.css' rel='stylesheet'/> */
+        /* <link href="dist/zoom.css" rel='stylesheet' /> */
+    </style>
+
+    <div id='map'>
+        <nav id="menu"></nav>
+        <!-- <button id="zoom">缩放</button> -->
+        <pre id='info'></pre>
+    </div>
+    <script src="../dist/testgeoserver.js"></script>
+</body>
+
+</html>

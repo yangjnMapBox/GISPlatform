@@ -1,0 +1,27 @@
+			#legend {
+				background-color: #FFFFFF;
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				width: 100px;
+				height: 160px;
+				border: 3px solid rgba(0, 0, 0, 0.25);
+			}
+
+			#legend p {
+				/* text-indent: 0px; */
+				margin: 0 !important;
+				float: right;
+				width: 70px;
+				height: 5% !important;
+			}
+
+			.circle {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				margin-left: 2px;
+				float: left;
+			}

@@ -1,0 +1,179 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+		"id": "d45d55a2a9ca2d7f23354ece6b5c4fce",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站1",
+			"ph": 7.38,
+			"phquality": "I",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站1",
+			"profile": "监测站1",
+			"belong": "监测站1",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.23254066040596, 25.602449820898727],
+			"type": "Point"
+		}
+	}, {
+		"id": "be4edbef54d8fd67fbd86ed9382f66a7",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站2",
+			"ph": 7.38,
+			"phquality": "II",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站2",
+			"profile": "监测站2",
+			"belong": "监测站2",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.21602797273846, 25.591107728803223],
+			"type": "Point"
+		}
+	}, {
+		"id": "616c28d126c3e3c5b24864c5a1ce0ece",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站3",
+			"ph": 7.38,
+			"phquality": "III",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站3",
+			"profile": "监测站3",
+			"belong": "监测站3",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.20467419951558, 25.577042904692462],
+			"type": "Point"
+		}
+	}, {
+		"id": "b646b1f07a698a014d43e62909fc0051",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站4",
+			"ph": 7.38,
+			"phquality": "IV",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站4",
+			"profile": "监测站4",
+			"belong": "监测站4",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.1970810891799, 25.568329001959626],
+			"type": "Point"
+		}
+	}, {
+		"id": "f3e7836060b75cd4296f2c61d2471b6d",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站5",
+			"ph": 7.38,
+			"phquality": "V",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站5",
+			"profile": "监测站5",
+			"belong": "监测站5",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.17738428284582, 25.56886950420177],
+			"type": "Point"
+		}
+	}, {
+		"id": "1729c4c4629a72adfc30c8ceddca6734",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站6",
+			"ph": 7.38,
+			"phquality": "IV",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站6",
+			"profile": "监测站6",
+			"belong": "监测站6",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.14788449667213, 25.571323490277436],
+			"type": "Point"
+		}
+	}, {
+		"id": "6d386c04e61f9b51b0f41e4684f1f6d4",
+		"type": "Feature",
+		"properties": {
+			"name": "监测站7",
+			"ph": 7.38,
+			"phquality": "III",
+			"oxygen": 7,
+			"oxygenquality": "II",
+			"nitrogen": 0.32,
+			"nitrogenquality": "II",
+			"permangan": 1.49,
+			"permanganquality": "II",
+			"orgacarbon": "--",
+			"orgacarbonquality": "II",
+			"section": "监测站7",
+			"profile": "监测站7",
+			"belong": "监测站7",
+			"date": "2018-09-18",
+			"time": "12:00:00"
+		},
+		"geometry": {
+			"coordinates": [100.07139737713771, 25.57356272214861],
+			"type": "Point"
+		}
+	}]
+}

@@ -1,0 +1,15 @@
+{
+	"tiles": ["http://192.168.82.38:7654/data/shenzhen_omt/{z}/{x}/{y}.png"],
+	"name": "shenzhen_omt",
+	"format": "png",
+	"basename": "shenzhen_omt.mbtiles",
+	"id": "shenzhen_omt",
+	"type": "overlay",
+	"description": "shenzhen_omt",
+	"version": "1.1",
+	"minzoom": 3,
+	"maxzoom": 16,
+	"bounds": [113.81527021639924, 22.45028053139539, 114.18295159642996, 22.634872636771238],
+	"center": [113.9991109064146, 22.542576584083314, 9],
+	"tilejson": "2.0.0"
+}
