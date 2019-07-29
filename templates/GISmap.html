@@ -16,7 +16,8 @@
 		<script type="text/javascript" src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/mapbox-gl-draw.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/truf.min.js') }}"></script>
-		<link href="{{ url_for('static',filename='css/mapbox-gl-draw.css') }}" rel='stylesheet'/>s
+		<link href="{{ url_for('static',filename='css/mapbox-gl-draw.css') }}" rel='stylesheet'/>
+
 		<style>
 			html,
 			body {
@@ -364,6 +365,9 @@
 		</div>
 		<input type="button" id="saveGeojson" value="保存" class="outGeoJson" />
 		<div class="leftMenu">
+			<a href="/customMap">
+				<input type="button" id="addMap" value="添加地图样式" autofocus="autofocus" >
+			</a>
 			<!-- <input type="button" id="addLayerButton" value="添加图层" autofocus="autofocus" onclick="addLayerFun()" > -->
 			<div class="layerBox">
 				<div>
@@ -455,6 +459,7 @@
 	<script>
 
 	</script>
+		<script src="{{ url_for('static',filename='dist/methods.js') }}"></script>
 		<script src="{{ url_for('static',filename='dist/map_dali.js') }}"></script>
 		<script src="{{ url_for('static',filename='dist/getMapAttribution.js') }}"></script>
 		<script src="{{ url_for('static',filename='dist/addControls.js') }}"></script>
@@ -463,6 +468,7 @@
 		<script src="{{ url_for('static',filename='dist/LayerControl.js') }}"></script>
 		<script src="{{ url_for('static',filename='dist/caseSelect.js') }}"></script>
 		<script src="{{ url_for('static',filename='dist/rightClick.js') }}"></script>
+		<script src="{{ url_for('static',filename='dist/customMap.js') }}"></script>
 		<!--<script src="{{ url_for('static',filename='dist/cluster.js') }}"></script>-->
 
 	</body>

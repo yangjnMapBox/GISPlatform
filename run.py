@@ -43,6 +43,9 @@ def index():
 @app.route('/dali')
 def dali():
 	return render_template('water_dali.html')
+@app.route('/customMap')
+def customMap():
+	return render_template('customMap.html')
 @app.route('/mapAttribution/')
 def mapAttribution():
 	starttime = datetime.datetime.now()
@@ -71,7 +74,7 @@ def mapAttribution():
 #程序入口
 if (__name__=='__main__'):
 	app.run(
-	host = '127.0.0.1',
+	host = '0.0.0.0',
 	port = 5005,
 	debug = True
 	)

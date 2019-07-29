@@ -1,40 +1,3 @@
-let bounds = [
-	[110.490727, 20.420933], // Southwest coordinates
-	[119.742071, 27.113881] // Northeast coordinates
-];
-let daliBound = [
-	[99,25],
-	[101.5,26.5]
-]
-var wyhCenter= [114.976529,23.889782];
-var daliCenter= [100.2068775,25.7470085];
-var chinaCenter = [109.248,32.34];
-var daliCityCenter = [100.239051,25.595759];
-arrLand = [311,411,506,602,604,702,704];
-arrOrderID3 = [301,304,305,306,307,311,320];
-arrOrderID4 = [401,404,405,407,408,411];
-arrOrderID5 = [501,505,506];
-arrOrderID6 = [601,602,603,604];
-arrOrderID7 = [701,702,703,704];
-arrDaliBGDOrderid = [102,103,111,112,113,114,115,116,117,119,120,121,122,123,124,126];//127桥梁面
-arrDaliBGDColor = ['RGB(242,239,232)','RGB(242,239,232)','RGB(0,169,230)','RGB(0,169,230)','RGB(167,219,154)','RGB(167,219,154)','RGB(167,219,154)',
-                    'RGB(132,37,42)','RGB(167,219,154)','RGB(219,213,199)','RGB(150,204,122)','RGB(219,213,199)','RGB(219,213,199)','RGB(247,247,242)',
-                    'RGB(219,213,199)','RGB(0,169,230)'];
-					// RGB(244,242,238)
-arrRoadLevel = [4,6,7,8,9,10,11,12,13,14,15,16,17];
-arrTextLevel = [[18,20],[17.5,20],[17,20],[17,20],[16,17],[15,16],[13,15]];
-
-function getRootPath() {
-
-			    var pathName = window.location.pathname.substring(1);
-
-			    var webName = pathName == '' ? '' : pathName.substring(0, pathName.indexOf('/'));
-
-			    return window.location.protocol + '//' + window.location.host  + '/';
-
-}
-testCenter = [114.017529068038, 22.5397032116539];
-
 var map = new mapboxgl.Map({
 	// attributionControl: true,
 	container: 'map',
@@ -59,11 +22,11 @@ var map = new mapboxgl.Map({
 		"sources": {
 			"raster": {
 				"type": "raster",
-
 				"tiles": [
 					"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&" +
 					"service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
 				],
+				"tilesize":256,
 			}
 		},
 		"layers": [
@@ -110,7 +73,7 @@ map.on('load', function () {
             'http://192.168.82.38:8765/data/dali_water/{z}/{x}/{y}.pbf'
 			// 'http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf',
 			// 'http://localhost:8070/geoserver/gwc/service/tms/1.0.0/water%3Awater0610@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf'
-			]
+		]
     });
 	map.addSource('dali_vector2', {
 		'type': 'vector',
@@ -769,6 +732,6 @@ var scale = new mapboxgl.ScaleControl({
 });
 map.addControl(scale);
 scale.setUnit('metric');
-map.addControl(new mapboxgl.AttributionControl({
-	compact: true
-}));
+//map.addControl(new mapboxgl.AttributionControl({
+//	compact: true
+//}));

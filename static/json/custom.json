@@ -1,0 +1,27 @@
+{
+  "sources": [{
+                "sourceName": "raster",
+				"type": "raster",
+				"tiles": [
+					"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&"
+					"service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
+				],
+				"tilesize":256
+			},{
+              "sourceName": "dali_cj",
+              "type":"raster",
+              "tiles":[
+                  "http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_cj"
+              ],
+              "tilesize":256
+            },{
+                "sourceName": "dali_vector",
+                "type": "vector",
+                "scheme": "tms",
+                "tiles": [
+                     "http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf"
+                ]
+            }
+  ],
+  "layer": []
+}

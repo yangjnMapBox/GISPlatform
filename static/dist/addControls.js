@@ -3,9 +3,8 @@
 //导航控件
 let navControl = new mapboxgl.NavigationControl({
 		showZoom:false,
-	
 });
-map.addControl(navControl);
+map.addControl(new mapboxgl.NavigationControl({showZoom:false,}));
 // map.addControl(new mapboxgl.GeolocateControl({
 // 	positionOptions: {
 // 		enableHighAccuracy: true
@@ -97,35 +96,35 @@ let daliStyle = {
 	}
 map.on("load", function () {
   // Possible position values are 'bottom-left', 'bottom-right', 'top-left', 'top-right'
-  miniMap = new mapboxgl.Minimap({
-							id:'minimap',
-							width:'172px',
-							height:"265px",
-							center:daliCenter,
-							zoom:8,
-							// maxBounds: miniBound,
-							style:daliStyle,
-							zoomLevels:[],
-					// 	  zoomLevels:[
-					// 		  [18,6,16],
-					// 		  [16,12,14],
-					// 		  [14,10,12],
-					// 		  [12,8,10],
-					// 		  [10,6,8]
-					// 	  ],
-							lineColor:"#08F",
-							lineWidth:2,
-							fillColor:"#F80",
-							fillOpacity:0.2,
-							
-						  dragPan:false,
-						  scrollZoom:false,
-						  boxZoom:false,
-						  dragRotate:false,
-						  keyboard:false,
-						  doubleClickZoom:false,
-						  touchZoomRotate:false
-						});
+    miniMap = new mapboxgl.Minimap({
+        id:'minimap',
+        width:'172px',
+        height:"265px",
+        center:daliCenter,
+        zoom:8,
+        // maxBounds: miniBound,
+        style:daliStyle,
+        zoomLevels:[],
+// 	  zoomLevels:[
+// 		  [18,6,16],
+// 		  [16,12,14],
+// 		  [14,10,12],
+// 		  [12,8,10],
+// 		  [10,6,8]
+// 	  ],
+        lineColor:"#08F",
+        lineWidth:2,
+        fillColor:"#F80",
+        fillOpacity:0.2,
+
+      dragPan:false,
+      scrollZoom:false,
+      boxZoom:false,
+      dragRotate:false,
+      keyboard:false,
+      doubleClickZoom:false,
+      touchZoomRotate:false
+    });
 	map.addControl(miniMap, 'bottom-right')
 });
 //比例分级滑块
