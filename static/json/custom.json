@@ -1,27 +1,136 @@
 {
-  "sources": [{
-                "sourceName": "raster",
-				"type": "raster",
-				"tiles": [
-					"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&"
-					"service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
+	"center": [100.2068775,25.7470085],
+	"zoom": 14,
+	"sources": [{
+		"sourceID": "raster",
+		"type": "raster",
+		"tiles": [
+			"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
+		],
+		"tilesize": 256
+	}, {
+		"sourceID": "dali_cj",
+		"type": "raster",
+		"tiles": [
+			"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_cj"
+		],
+		"tilesize": 256
+	}, {
+		"sourceID": "dali_vector",
+		"type": "vector",
+		"scheme": "tms",
+		"tiles": [
+			"http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf"
+		]
+	}],
+	"layers": [{
+			"id": "dali_resize",
+			"type": "raster",
+			"source": "raster",
+			"layout": {
+				"visibility": "none"
+			}
+		},
+		{
+			"id": "district_dali",
+			"type": "fill",
+			"source": "dali_vector",
+			"source-layer": "district_dali",
+			"paint": {
+				"fill-color": "RGB(146,175,202)"
+			}
+		},
+		{
+			"id": "bgd_other",
+			"type": "fill",
+			"source": "dali_vector",
+			"source-layer": "bgd",
+			"filter": ["!in", "orderid", 111, 112, 113, 114, 115, 120, 126],
+			"minzoom": 8,
+			"paint": {
+				"fill-color": "RGB(242,239,232)"
+			}
+		},
+		{
+			"id": "bgd_water",
+			"type": "fill",
+			"source": "dali_vector",
+			"source-layer": "bgd",
+			"filter": ["in", "orderid", 111, 112, 126],
+			"minzoom": 8,
+			"paint": {
+				"fill-color": "RGB(0,169,230)"
+			}
+		},
+		{
+			"id": "bgd_lvdi",
+			"type": "fill",
+			"source": "dali_vector",
+			"source-layer": "bgd",
+			"filter": ["in", "orderid", 113, 114, 115, 120],
+			"minzoom": 8,
+			"paint": {
+				"fill-color": "RGB(167,219,154)"
+			}
+		},
+		{
+			"id": "road",
+			"type": "line",
+			"source": "dali_vector",
+			"source-layer": "road",
+			"paint": {
+				"line-color": "RGB(167,219,154)"
+			}
+		},
+		{
+			"id": "building_ex",
+			"source": "dali_vector",
+			"source-layer": "building",
+			"type": "fill-extrusion",
+			"minzoom": 15.5,
+			"paint": {
+				"fill-extrusion-color": "RGB(182,183,187)",
+				"fill-extrusion-height": ["get", "height"],
+				"fill-extrusion-opacity": {
+					"stops": [
+						[15.5, 0],
+						[16, 1]
+					]
+				}
+			},
+			"interactive": true
+		},
+		{
+			"id": "text",
+			"source": "dali_vector",
+			"source-layer": "text",
+			"type": "symbol",
+			"filter": ["in", "levelid", 0],
+			"layout": {
+				"icon-image": [
+					"match", ["get", "typecode"],
+					11010000, "restaurant-noodle-15",
+					14990000, "suitcase-15",
+					24990000, "town-hall-15",
+					14060000, "shop-15",
+					12050000, "lodging-15",
+					11030000, "restaurant-pizza-15",
+					12990000, "lodging-11",
+					14040000, "convenience-15",
+					12010000, "lodging-11",
+					14050000, "prison-11",
+					"dot-9"
 				],
-				"tilesize":256
-			},{
-              "sourceName": "dali_cj",
-              "type":"raster",
-              "tiles":[
-                  "http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_cj"
-              ],
-              "tilesize":256
-            },{
-                "sourceName": "dali_vector",
-                "type": "vector",
-                "scheme": "tms",
-                "tiles": [
-                     "http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf"
-                ]
-            }
-  ],
-  "layer": []
+				"icon-size": 1.5,
+				"text-field": "{stext}",
+				"text-size": 10,
+				"text-offset": [0, 2],
+				"text-font": ["MicrosoftYaHeiRegular"],
+				"text-anchor": "bottom"
+			},
+			"paint": {
+				"text-color": "RGB(0,0,0)"
+			}
+		}
+	]
 }
