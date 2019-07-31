@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据源属性面板</title>
+    <link href="{{ url_for('static',filename='layui/css/layui.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static',filename='layui/layui.js') }}"></script>
+</head>
+<body>
+    <table id="sourceTable" lay-filter="test"></table>
+    <script type="text/html" id="barTable">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs" lay-event="add">新增</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <script>
+    layui.use('table', function(){
+      var table = layui.table;
+      //第一个实例
+      table.render({
+        elem: '#sourceTable'
+        ,height: 312
+        //,url: '' //数据接口
+        ,data:[{sourceID:"yangjn",type:"vector",tilesize:"yangjnyangjn",scheme:"TMS",tiles:""}]
+        ,cols: [[ //表头
+          {field: 'sourceID', title: '名称', width:100}
+          ,{field: 'type', title: '类型', width:80}
+          ,{field: 'tilesize', title: '瓦片尺寸', width:100}
+          ,{field: 'scheme', title: '服务类型', width: 100}
+          ,{field: 'tiles', title: '数据源url', width:550 }
+          ,{fixed:"right",width:150,align:'center',toolbar:'#barTable'}
+        ]]
+      });
+
+      table.on('tool(test)',function(obj){
+          var data = obj.data;
+          var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+          var tr = obj.tr; //获得当前行 tr 的DOM对象
+
+          if(layEvent === 'detail'){ //查看
+            //do somehing
+          } else if(layEvent === 'del'){ //删除
+            layer.confirm('真的删除行么', function(index){
+              obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+              layer.close(index);
+              //向服务端发送删除指令
+            });
+          } else if(layEvent === 'edit'){ //编辑
+            let objSource = {};
+            //do something
+            layui.use('layer',function(){
+                var layer = layui.layer
+                    layer.open({
+                        title:"数据源属性面板",
+                        type:2,
+                        content:'sourceInfo',
+                        area:['600px', '460px']
+                        ,yes:function(){
+
+                        }
+                    })
+            })
+            //同步更新缓存对应的值
+            obj.update({
+              sourceID: 'huanghong'
+              ,type: 'raster'
+            });
+          }
+        })
+    });
+    </script>
+
+</body>
+</html>

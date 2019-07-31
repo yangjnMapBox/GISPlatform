@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sourceInfo</title>
+    <link href="{{ url_for('static',filename='layui/css/layui.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static',filename='layui/layui.js') }}"></script>
+</head>
+
+<body>
+    <form class="layui-form" action="" lay-filter="example">
+        <div class="layui-form-item">
+          <label class="layui-form-label">名称:</label>
+          <div class="layui-input-block">
+            <input type="text" name="sourceID" lay-verify="required" autocomplete="off" class="layui-input" placeholder="必填且唯一">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">类型:</label>
+          <div class="layui-input-block">
+            <input type="text" name="type" lay-verify="required" autocomplete="off" class="layui-input" placeholder="必填">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">数据源url:</label>
+          <div class="layui-input-block">
+            <input type="text" name="tiles" lay-verify="required" autocomplete="off" class="layui-input" placeholder="必填">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">瓦片尺寸:</label>
+          <div class="layui-input-block">
+            <input type="text" name="tilesize" lay-verify="required" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">服务类型:</label>
+          <div class="layui-input-block">
+            <input type="text" name="scheme" lay-verify="required" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+
+      </form>
+</body>
+</html>

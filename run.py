@@ -22,10 +22,10 @@ global cursor
 # cursor = conn.cursor()
 
 # #地图数据库表
-# global g_lstTable
+global g_lstTable
 # g_lstTables = ['water','point','reservoir','bgd_25_water','river','djhydrographicnet']
 # #取water表属性
-# global g_dictWaters
+global g_dictWaters
 # g_dictWaters = {}
 # strSql = "select bgdid,x_min,x_max,y_min,y_max from water order by gid"
 # cursor.execute(strSql)
@@ -46,6 +46,12 @@ def dali():
 @app.route('/customMap')
 def customMap():
 	return render_template('customMap.html')
+@app.route('/addSources')
+def addSources():
+	return render_template('addSources.html')
+@app.route('/sourceInfo')
+def sourceInfo():
+	return render_template('sourceInfo.html')
 @app.route('/mapAttribution/')
 def mapAttribution():
 	starttime = datetime.datetime.now()
