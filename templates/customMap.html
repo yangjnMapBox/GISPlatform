@@ -128,6 +128,8 @@
 		<div class="leftMenu">
 			<input type="button"  data-method="offset" datatype="auto" class="layui-btn layui-btn-normal" id="addCusMap" onclick="addCusMap()" value="自定义地图" autofocus="autofocus">
 			<input type="file" id="addCusStyle" value="导入地图文件" autofocus="autofocus" onchange="addCusStyle()">
+			<div id="treeSourceLayer" class="demo-tree-more"></div>
+
 		</div>
 		<div id="addLayerPage" >
 			<div style="height: 30px;background-color: RGB(223,214,214); position: absolute; top:20px;width: 100%;">
@@ -169,20 +171,7 @@
 			<label class="layui-form-lable">数据源名称（ID）</label>
 		</div>
 	    <script src="{{ url_for('static',filename='dist/methods.js') }}"></script>
-        <script>
-            initMap();
-            function addCusMap(){
-				layui.use('layer',function(){
-					var layer = layui.layer
-						layer.open({
-							title:"添加数据源",
-							type:2,
-							content:'addSources',
-							area:['900px', '560px']
-						})
-            	})
-			}
-	    </script>
+		<script src="{{ url_for('static',filename='dist/customMap.js') }}"></script>
 	</body>
 
 </html>

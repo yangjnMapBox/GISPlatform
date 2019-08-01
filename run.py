@@ -46,10 +46,10 @@ def dali():
 @app.route('/customMap')
 def customMap():
 	return render_template('customMap.html')
-@app.route('/addSources')
+@app.route('/customMap/addSources')
 def addSources():
 	return render_template('addSources.html')
-@app.route('/sourceInfo')
+@app.route('/customMap/addSources/sourceInfo')
 def sourceInfo():
 	return render_template('sourceInfo.html')
 @app.route('/mapAttribution/')
