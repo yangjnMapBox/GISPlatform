@@ -126,9 +126,11 @@
 		</div>
 		<input type="button" id="saveGeojson" value="保存" class="outGeoJson" />
 		<div class="leftMenu">
-			<input type="button"  data-method="offset" datatype="auto" class="layui-btn layui-btn-normal" id="addCusMap" onclick="addCusMap()" value="自定义地图" autofocus="autofocus">
+			<input type="button"  data-method="offset" datatype="auto" class="layui-btn layui-btn-normal" id="addCusSources" onclick="addCusSources()" value="添加数据源" autofocus="autofocus">
+			<input type="button"  data-method="offset" datatype="auto" class="layui-btn layui-btn-normal" id="addCusLayers" onclick="addCusLayers()" value="添加数据源" autofocus="autofocus">
 			<input type="file" id="addCusStyle" value="导入地图文件" autofocus="autofocus" onchange="addCusStyle()">
-			<div id="treeSourceLayer" class="demo-tree-more"></div>
+			<div id="treeSource" class="demo-tree-more"></div>
+			<div id="treeLayer" class="demo-tree-more"></div>
 
 		</div>
 		<div id="addLayerPage" >

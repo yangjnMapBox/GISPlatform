@@ -52,6 +52,10 @@ def addSources():
 @app.route('/customMap/addSources/sourceInfo')
 def sourceInfo():
 	return render_template('sourceInfo.html')
+
+@app.route('/guanlanhu')
+def guanlanhu():
+    return render_template('guanlanhu.html')
 @app.route('/mapAttribution/')
 def mapAttribution():
 	starttime = datetime.datetime.now()
