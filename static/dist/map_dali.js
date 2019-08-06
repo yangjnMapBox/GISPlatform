@@ -725,13 +725,7 @@ map.on('load', function () {
 //         })
 //     });
 // })
-//添加比例尺
-var scale = new mapboxgl.ScaleControl({
-	maxWidth: 80,
-	unit: 'imperial'
-});
-map.addControl(scale);
-scale.setUnit('metric');
+
 //map.addControl(new mapboxgl.AttributionControl({
 //	compact: true
 //}));

@@ -94,6 +94,13 @@ let daliStyle = {
 			}
 		]
 	}
+//添加比例尺
+var scale = new mapboxgl.ScaleControl({
+	maxWidth: 80,
+	unit: 'imperial'
+});
+map.addControl(scale,'bottom-right');
+scale.setUnit('metric');
 map.on("load", function () {
   // Possible position values are 'bottom-left', 'bottom-right', 'top-left', 'top-right'
     miniMap = new mapboxgl.Minimap({
