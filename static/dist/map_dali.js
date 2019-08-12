@@ -34,7 +34,7 @@ var map = new mapboxgl.Map({
 				"id": "background",
 				"type": "background",
 				"paint": {
-					"background-color": 'RGB(37,75,111)',
+					"background-color": 'RGB(242,239,232)',
 				}
 			},
 			{
@@ -68,33 +68,32 @@ map.on('load', function () {
 	});
     map.addSource('dali_vector', {
         'type': 'vector',
-        // 'scheme': 'tms',
+         'scheme': 'tms',
         'tiles': [
-            'http://192.168.82.38:8765/data/dali_water/{z}/{x}/{y}.pbf'
-			// 'http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf',
+//            'http://192.168.82.38:8765/data/dali_water/{z}/{x}/{y}.pbf'
+			 'http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf',
 			// 'http://localhost:8070/geoserver/gwc/service/tms/1.0.0/water%3Awater0610@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf'
 		]
     });
-	map.addSource('dali_vector2', {
-		'type': 'vector',
-		// 'scheme': 'tms',
-		'tiles': [
-			'http://192.168.82.38:8764/data/text/{z}/{x}/{y}.pbf'
-			// 'http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf',
-			// 'http://localhost:8070/geoserver/gwc/service/tms/1.0.0/water%3Awater0610@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf'
-			]
-	});
+//	map.addSource('dali_vector2', {
+//		'type': 'vector',
+//		// 'scheme': 'tms',
+//		'tiles': [
+//			'http://192.168.82.38:8764/data/text/{z}/{x}/{y}.pbf'
+//			// 'http://192.168.82.38:8080/geoserver/gwc/service/tms/1.0.0/water%3Awater_dali@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf',
+//			// 'http://localhost:8070/geoserver/gwc/service/tms/1.0.0/water%3Awater0610@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf'
+//			]
+//	});
 	map.addLayer({
 		'id':'district_dali',
-		'type':'fill',
+		'type':'line',
 		'source':'dali_vector',
 		'source-layer':'district_dali',
 //		'maxzoom':6.5,
 		'paint':{
-			'fill-color':'RGB(146,175,202)',
-		},
-		'layout':{
-			'visibility':'visible'
+			'line-color':'RGB(81,87,89)',
+			'line-width':2,
+			'line-opacity':.8
 		}
 	});
     for(var i = 0;i<arrDaliBGDOrderid.length;i++)
@@ -114,375 +113,156 @@ map.on('load', function () {
             }
         });
     }
-// 	arrDaliBGDOrderid = [102,103,111,112,113,114,115,116,117,119,120,121,122,123,124,126];//127
-// 	arrDaliBGDColor = ['RGB(242,239,232)','RGB(242,239,232)','RGB(0,169,230)','RGB(0,169,230)','RGB(167,219,154)','RGB(167,219,154)','RGB(167,219,154)',
-// 	                    'RGB(132,37,42)','RGB(167,219,154)','RGB(219,213,199)','RGB(150,204,122)','RGB(219,213,199)','RGB(219,213,199)','RGB(247,247,242)',
-// 	                    'RGB(219,213,199)','RGB(0,169,230)'];
-// 	map.addLayer({
-// 		'id':'bgd_all',
-// 		'type':'fill',
-// 		'source':'dali_vector',
-// 		'source-layer':'bgd',
-// 		// "filter":["==","orderid",arrDaliBGDOrderid[i]],
-// 		"minzoom": 8,
-// 		'paint':{
-// 			'fill-color': [
-// 			'match',
-// 			['get', 'orderid'],
-// 			arrDaliBGDOrderid[0], arrDaliBGDColor[0],
-// 			arrDaliBGDOrderid[1], arrDaliBGDColor[1],
-// 			arrDaliBGDOrderid[2], arrDaliBGDColor[2],
-// 			arrDaliBGDOrderid[3], arrDaliBGDColor[3],
-// 			arrDaliBGDOrderid[4], arrDaliBGDColor[4],
-// 			arrDaliBGDOrderid[5], arrDaliBGDColor[5],
-// 			arrDaliBGDOrderid[6], arrDaliBGDColor[6],
-// 			arrDaliBGDOrderid[7], arrDaliBGDColor[7],
-// 			arrDaliBGDOrderid[8], arrDaliBGDColor[8],
-// 			arrDaliBGDOrderid[9], arrDaliBGDColor[9],
-// 			arrDaliBGDOrderid[10], arrDaliBGDColor[10],
-// 			arrDaliBGDOrderid[11], arrDaliBGDColor[11],
-// 			arrDaliBGDOrderid[12], arrDaliBGDColor[12],
-// 			arrDaliBGDOrderid[13], arrDaliBGDColor[13],
-// 			arrDaliBGDOrderid[14], arrDaliBGDColor[14],
-// 			arrDaliBGDOrderid[15], arrDaliBGDColor[15],
-// 			/* other */ 'RGB(184,223,171)'
-// 			]
-// 		},
-// 		'layout':{
-// 		}
-// 	})
-	
-// 	map.addLayer({
-// 		'id':'bgd_all',
-// 		'type':'fill',
-// 		'source':'dali_vector',
-// 		'source-layer':'bgd',
-// 		// "filter":["==","orderid",arrDaliBGDOrderid[i]],
-// 		"minzoom": 8,
-// 		'paint':{
-// 			// 102,103,111,112,113,114
-// 			'fill-color': [
-// 			'match',
-// 			['get', 'orderid'],
-// 			arrDaliBGDOrderid[15], arrDaliBGDColor[15],
-// 			arrDaliBGDOrderid[14], arrDaliBGDColor[14],
-// 			arrDaliBGDOrderid[13], arrDaliBGDColor[13],
-// 			arrDaliBGDOrderid[12], arrDaliBGDColor[12],
-// 			arrDaliBGDOrderid[11], arrDaliBGDColor[11],
-// 			arrDaliBGDOrderid[10], arrDaliBGDColor[10],
-// 			arrDaliBGDOrderid[9], arrDaliBGDColor[9],
-// 			arrDaliBGDOrderid[8], arrDaliBGDColor[8],
-// 			arrDaliBGDOrderid[7], arrDaliBGDColor[7],
-// 			arrDaliBGDOrderid[6], arrDaliBGDColor[6],
-// 			arrDaliBGDOrderid[5], arrDaliBGDColor[5],
-// 			arrDaliBGDOrderid[4], arrDaliBGDColor[4],
-// 			arrDaliBGDOrderid[3], arrDaliBGDColor[3],
-// 			arrDaliBGDOrderid[2], arrDaliBGDColor[2],
-// 			arrDaliBGDOrderid[1], arrDaliBGDColor[1],
-// 			arrDaliBGDOrderid[0], arrDaliBGDColor[0],
-// 			/* other */ 'RGB(184,223,171)'
-// 			]
-// 		},
-// 		'layout':{
-// 			// 'visibility':'none'
-// 		}
-// 	})
-// 	map.addLayer({
-// 		'id':'bgd_water',
-// 		'type':'fill',
-// 		'source':'dali_vector',
-// 		'source-layer':'bgd',
-// 		"filter":["in","orderid",111,112],
-// 		'paint':{
-// 			'fill-color':"RGB(0,169,230)",
-// 		},
-// 		'layout':{
-// 			'visibility':'none'
-// 		}
-// 	})
-// 	map.addLayer({
-// 		'id':'bgd_island',
-// 		'type':'fill',
-// 		'source':'dali_vector',
-// 		'source-layer':'bgd',
-// 		"filter":["==","orderid",119],
-// 		'paint':{
-// 			'fill-color':"RGB(247,247,242)",
-// 		},
-// 		'layout':{
-// 			'visibility':'none'
-// 		}
-// 	})
-//     for (var i = 0;i<arrOrderID5.length;i++)
-// 	{
-// 	    if (arrLand.indexOf(arrOrderID5[i])>-1)
-// 	    {
-// 	        map.addLayer({
-//                 'id':'land'+arrOrderID5[i].toString(),
-//                 'type':'fill',
-//                 'source':'dali_vector',
-//                 'source-layer':'bgd_100w_water',
-//                 "filter":[
-//                     "all",
-//                     ["==","levelid",5],
-//                     ["==","orderid",arrOrderID5[i]]
-//                 ],
-//                 "minzoom": 12,
-//                 "maxzoom":14,
-//                 'paint':{
-//                     'fill-color':'RGB(245,244,250)',
-//                 },
-//                 'layout':{
-//                     'visibility':'visible'
-//                 }
-//             });
-// 	    }
-// 	    else
-// 	    {
-// 	        map.addLayer({
-//                 'id':'water'+arrOrderID5[i].toString(),
-//                 'type':'fill',
-//                 'source':'dali_vector',
-//                 'source-layer':'bgd_100w_water',
-//                 "filter":[
-//                     "all",
-//                     ["==","levelid",5],
-//                     ["==","orderid",arrOrderID5[i]]
-//                 ],
-//                 "minzoom": 12,
-//                 "maxzoom":14,
-//                 'paint':{
-//                     'fill-color':'RGB(0,169,230)',
-//                 },
-//                 'layout':{
-//                     'visibility':'visible'
-//                 }
-//             });
-// 	    }
-// 	}
-// 	for (var i = 0;i<arrOrderID6.length;i++)
-// 	{
-// 	    if (arrLand.indexOf(arrOrderID6[i])>-1)
-// 	    {
-// 	        map.addLayer({
-//                 'id':'land'+arrOrderID6[i].toString(),
-//                 'type':'fill',
-//                 'source':'dali_vector',
-//                 'source-layer':'bgd_100w_water',
-//                 "filter":[
-//                     "all",
-//                     ["==","levelid",6],
-//                     ["==","orderid",arrOrderID6[i]]
-//                 ],
-//                 "minzoom": 7,
-//                 "maxzoom":12,
-//                 'paint':{
-//                     'fill-color':'RGB(245,244,250)',
-//                 },
-//                 'layout':{
-//                     'visibility':'visible'
-//                 }
-//             });
-// 	    }
-// 	    else
-// 	    {
-// 	        map.addLayer({
-//                 'id':'water'+arrOrderID6[i].toString(),
-//                 'type':'fill',
-//                 'source':'dali_vector',
-//                 'source-layer':'bgd_100w_water',
-//                 "filter":[
-//                     "all",
-//                     ["==","levelid",6],
-//                     ["==","orderid",arrOrderID6[i]]
-//                 ],
-//                 "minzoom": 7,
-//                 "maxzoom":12,
-//                 'paint':{
-//                     'fill-color':'RGB(0,169,230)',
-//                 },
-//                 'layout':{
-//                     'visibility':'visible'
-//                 }
-//             });
-// 	    }
-// 	}
-// 	for (var i = 0;i<arrOrderID7.length;i++)
-// 	{
-// 	    if (arrLand.indexOf(arrOrderID7[i])>-1)
-// 	    {
-// 	        map.addLayer({
-//                 'id':'land'+arrOrderID7[i].toString(),
-//                 'type':'fill',
-//                 'source':'dali_vector',
-//                 'source-layer':'bgd_100w_water',
-//                 "filter":[
-//                     "all",
-//                     ["==","levelid",7],
-//                     ["==","orderid",arrOrderID7[i]]
-//                 ],
-//                 "minzoom": 2,
-//                 "maxzoom":7,
-//                 'paint':{
-//                     'fill-color':'RGB(245,244,250)',
-//                 },
-//                 'layout':{
-//                     'visibility':'visible'
-//                 }
-//             });
-// 	    }
-// 	    else
-// 	    {
-// 	        map.addLayer({
-//                 'id':'water'+arrOrderID7[i].toString(),
-//                 'type':'fill',
-//                 'source':'dali_vector',
-//                 'source-layer':'bgd_100w_water',
-//                 "filter":[
-//                     "all",
-//                     ["==","levelid",7],
-//                     ["==","orderid",arrOrderID7[i]]
-//                 ],
-//                 "minzoom": 2,
-//                 "maxzoom":7,
-//                 'paint':{
-//                     'fill-color':'RGB(0,169,230)',
-//                 },
-//                 'layout':{
-//                     'visibility':'visible'
-//                 }
-//             });
-// 	    }
-// 	}
-	for(var i = 0;i<arrRoadLevel.length;i++)
-	{
-	    map.addLayer({
-                'id':'road'+i.toString(),
-                'type':'line',
-                'source':'dali_vector',
-                'source-layer':'road',
-                "filter":["==","showgrade",i+1],
-                "minzoom": arrRoadLevel[i],
-                'paint':{
-                    'line-color':'RGB(230,192,149)',
+
+	//辅助道路
+    for(let i = 0;i<arrRoadLevel.length;i++)
+    {
+        map.addLayer({
+            'id':'roadSup_'+arrRoadLevel[i][0],
+            'type':'line',
+            'source':'dali_vector',
+            'source-layer':'road',
+            "filter":[
+                'all',
+                ["==","showgrade",arrRoadLevel[i][0]],
+                ['in','roadclass',arrRoadClassSup[0]]
+            ],
+            "minzoom": arrRoadLevel[i][1],
+            'paint':{
+                    'line-color':'rgb(155,155,155)',
                     'line-width':{
-					    'stops':[[12,2.2],[22,14]]
-				    }
-                },
-                'layout':{
-                    'visibility':'visible'
-                }
+                        'stops':[[8,2],[19,4]]
+                    }
+            }
         });
-	}
-	for(var i = 0;i<arrRoadLevel.length;i++)
-	{
-	    map.addLayer({
-                'id':'road_'+i.toString(),
-                'type':'line',
-                'source':'dali_vector',
-                'source-layer':'road',
-                "filter":["==","showgrade",i+1],
-                "minzoom": arrRoadLevel[i],
-                'paint':{
-                    'line-color':'RGB(255,213,85)',
+    }
+    for(let i = 0;i<arrRoadLevel.length;i++)
+    {
+        map.addLayer({
+            'id':'roadSup'+arrRoadLevel[i][0],
+            'type':'line',
+            'source':'dali_vector',
+            'source-layer':'road',
+            "filter":[
+                'all',
+                ["==","showgrade",arrRoadLevel[i][0]],
+                ['in','roadclass',arrRoadClassSup[0]]
+            ],
+            "minzoom": arrRoadLevel[i][1],
+            'paint':{
+                    'line-color':arrRoadColorSup[0][1],
                     'line-width':{
-					    'stops':[[12,2],[22,13]]
-				    }
-                },
-                'layout':{
-                    'visibility':'visible'
-                }
+                        'stops':[[8,1.5],[19,3.5]]
+                    }
+            }
         });
-	}
-	
-// 	map.addLayer({
-// 			'id':'road_all_',
-// 			'type':'line',
-// 			'source':'dali_vector',
-// 			'source-layer':'road',
-// 			// "filter":["==","showgrade",i+1],
-// 			'minzoom': [
-// 				'match',
-// 				['get', 'showgrade'],
-// 				1, 3,
-// 				2, 4,
-// 				3, 5,
-// 				4, 6,
-// 				/* other */ 7
-// 			],
-// 			'paint':{
-// 				'line-color':'RGB(255,213,85)',
-// 				'line-width':{
-// 					'stops':[[12,2.2],[22,14]]
-// 				}
-// 			},
-// 			'layout':{
-// 				'visibility':'visible'
-// 			}
-// 	});
-// 	map.addLayer({
-// 			'id':'road_all',
-// 			'type':'line',
-// 			'source':'dali_vector',
-// 			'source-layer':'road',
-// 			// "filter":["==","showgrade",i+1],
-// 			"minzoom": [
-// 				'match',
-// 				['get', 'showgrade'],
-// 				1,arrRoadLevel[0],
-// 				2,arrRoadLevel[1],
-// 				3,arrRoadLevel[2],
-// 				4,arrRoadLevel[3],
-// 				5,arrRoadLevel[4],
-// 				6,arrRoadLevel[5],
-// 				7,arrRoadLevel[6],
-// 				8,arrRoadLevel[7],
-// 				9,arrRoadLevel[8],
-// 				10,arrRoadLevel[9],
-// 				11,arrRoadLevel[10],
-// 				12,arrRoadLevel[11],
-// 				13,arrRoadLevel[12],
-// 				/* other */ 18
-// 			],
-// 			'paint':{
-// 				'line-color':'RGB(255,213,85)',
-// 				'line-width':{
-// 					'stops':[[12,2],[22,13]]
-// 				}
-// 			},
-// 			'layout':{
-// 				'visibility':'visible'
-// 			}
-// 	});
-// 	map.addLayer({
-// 		'id': 'building',
-// 		'source': 'dali_vector',
-// 		'source-layer': 'building',
-// 		'type': 'fill',
-// 		'minzoom': 12,
-// 		'paint': {
-// 			'fill-color':'RGB(182,183,187)'
-// 		},
-// 		'layout':{
-// 			'visibility':'visible'//visible
-// 		},
-// 		"interactive": true
-// 	})
+    }
+    //次要道路
+    for(let i = 0;i<arrRoadLevel.length;i++)
+    {
+        map.addLayer({
+            'id':'roadMinor_'+arrRoadLevel[i][0],
+            'type':'line',
+            'source':'dali_vector',
+            'source-layer':'road',
+            "filter":[
+                'all',
+                ["==","showgrade",arrRoadLevel[i][0]],
+                ['!in','roadclass',arrRoadClassMain[0],arrRoadClassMain[1],arrRoadClassMain[2],arrRoadClassMain[3],arrRoadClassSup[0]]
+            ],
+            "minzoom": arrRoadLevel[i][1],
+            'paint':{
+                    'line-color':'rgb(155,155,155)',
+                    'line-width':{
+                        'stops':[[8,2],[19,10]]
+                    }
+            }
+        });
+    }
+    for(let i = 0;i<arrRoadLevel.length;i++)
+    {
+        map.addLayer({
+            'id':'roadMinor'+arrRoadLevel[i][0],
+            'type':'line',
+            'source':'dali_vector',
+            'source-layer':'road',
+            "filter":[
+                'all',
+                ["==","showgrade",arrRoadLevel[i][0]],
+                ['!in','roadclass',arrRoadClassMain[0],arrRoadClassMain[1],arrRoadClassMain[2],arrRoadClassMain[3],arrRoadClassSup[0]]
+            ],
+            "minzoom": arrRoadLevel[i][1],
+            'paint':{
+                    'line-color':'rgb(245,245,245)',
+                    'line-width':{
+                        'stops':[[8,1.5],[19,9]]
+                    }
+            }
+        });
+    }
+    //主要道路
+    for(let i = 0;i<arrRoadLevel.length;i++)
+    {
+        map.addLayer({
+            'id':'roadMain_'+arrRoadLevel[i][0],
+            'type':'line',
+            'source':'dali_vector',
+            'source-layer':'road',
+            "filter":[
+                'all',
+                ["==","showgrade",arrRoadLevel[i][0]],
+                ['in','roadclass',arrRoadClassMain[0],arrRoadClassMain[1],arrRoadClassMain[2],arrRoadClassMain[3]]
+            ],
+            "minzoom": arrRoadLevel[i][1],
+            'paint':{
+                    'line-color':'rgb(155,155,155)',
+                    'line-width':{
+                        'stops':[[8,2],[19,14]]
+                    }
+            }
+        });
+    }
+    for(let i = 0;i<arrRoadLevel.length;i++)
+    {
+        map.addLayer({
+            'id':'roadMain'+arrRoadLevel[i][0],
+            'type':'line',
+            'source':'dali_vector',
+            'source-layer':'road',
+            "filter":[
+                'all',
+                ["==","showgrade",arrRoadLevel[i][0]],
+                ['in','roadclass',arrRoadClassMain[0],arrRoadClassMain[1],arrRoadClassMain[2],arrRoadClassMain[3]]
+            ],
+            "minzoom": arrRoadLevel[i][1],
+            'paint':{
+                    'line-color':['match',['get','roadclass'],
+                        arrRoadColorMain[0][0],arrRoadColorMain[0][1],
+                        arrRoadColorMain[1][0],arrRoadColorMain[1][1],
+                        arrRoadColorMain[2][0],arrRoadColorMain[2][1],
+                        arrRoadColorMain[3][0],arrRoadColorMain[3][1],
+                        'rgb(255,255,255)'
+                    ],
+                    'line-width':{
+                        'stops':[[8,1.5],[19,13]]
+                    }
+            }
+        });
+    }
+
 	map.addLayer({
 		'id': 'building_ex',
 		'source': 'dali_vector',
 		'source-layer': 'building',
 		'type': 'fill-extrusion',
-		'minzoom': 15.5,
+		'minzoom': 16,
 		'paint': {
-			"fill-extrusion-color": 'RGB(182,183,187)',
+			"fill-extrusion-color": 'RGB(225,225,223)',
 			'fill-extrusion-height': ['get', 'height'],
-			'fill-extrusion-opacity': {
-				"stops": [[15.5, 0], [16, 1]],
-			},
-		},
-		'layout':{
-			'visibility':'visible'//visible
+//			'fill-extrusion-opacity': {
+//				"stops": [[15.5, 0], [16, 1]],
+//			},
+            'fill-extrusion-opacity':0.8,
 		},
 		"interactive": true
 	})
@@ -504,44 +284,57 @@ map.on('load', function () {
 	
 	for(var i =0;i<arrTextLevel.length;i++)
 	{
+	    let filter = ['in','level']
+	    for (let ii = 1;ii<arrTextLevel[i].length;ii++){
+	        filter.push(arrTextLevel[i][ii])
+	    }
 		map.addLayer({
 			'id':'text'+i.toString(),
-			'source':'dali_vector2',
+			'source':'dali_vector',
 			'source-layer':'text',
 			'type':'symbol',
 			'minzoom':arrTextLevel[i][0],
-			'maxzoom':arrTextLevel[i][1],
-			'filter':['==','levelid',i],
+			'filter':filter,
 			'layout':{
 				"icon-image":[
 					"match",
 					['get','typecode'],
 					11010000,"restaurant-noodle-15",//中餐馆
 					14990000,"suitcase-15",//购物设施
-					24990000,"town-hall-15",//其它企事业单位
+					24990000,"town-hall-11",//其它企事业单位
 					14060000,"shop-15",//家具、家装、建材
 					12050000,"lodging-15",//招待所
 					11030000,"restaurant-pizza-15",//小吃快餐
 					12990000,"lodging-11",//酒店
+					23010000,"residence_1",//住宅
+					17040000,"yaodian_1",//药店
+					20130000,"car-repair-11",//汽车维修店
+					23160000,"residence_1",//村，社区
 					14040000,"convenience-15",//超市便利店
 					12010000,"lodging-11",//星级酒店
 					14050000,"prison-11",//电子电器
-					"dot-9"//黑点
+					20180000,"car-repair-11",//轮胎维修店
+					22010000,"bank-15",//银行
+					20040000,"parking-15",//停车场
+					18070400,"town-hall-11",//村级政府
+					20160000,"car-15",//品牌汽车服务店
+					20140000,"car-rental-11",//汽车美容店
+					"border-dot-13"//黑点
 				],
 				// "icon-offset":[0,0],
-				"icon-size":1.5,
+				"icon-size":1,
 				// 'symbol-placement':"line",
 				'text-field':"{stext}",
-				'text-size':10,
+				'text-size':11,
 				"text-offset":[0,2],
 				'text-font':['MicrosoftYaHeiRegular'],
 				'text-anchor':'bottom'
 			},
 			'paint':{
 				'text-color':'RGB(0,0,0)',
-// 				'text-halo-color':'RGB(95,78,59)',
-// 				'text-halo-width':1,
-// 				'text-halo-blur':1,
+ 				'text-halo-color':'RGB(253,253,254)',
+ 				'text-halo-width':0.7,
+ 				'text-halo-blur':0.7,
 			}
 		})
 	}

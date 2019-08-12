@@ -69,12 +69,13 @@ $(document).ready(function() {
 			$('#search-result').empty();
 			if($('#searchName').val() != ''){
 				var q = $("#searchName").val().replace(/\s*/g, "").toLowerCase();
-				var data = ['污染源1 ', '监测站1', '监测站2', '监测站3', '监测站4', '监测站5']
-				var patt1 = new RegExp(q);
-				$('#search-result').empty();
-				for(var i in data){
-					if(patt1.test(data[i])){
-						currentProposals.push(data[i]);	
+				var {lng,lat} = map.getCenter(),zoom = map.getZoom();
+				$.get('/getSearchPOIJson/', {'strSearch':q, 'coorX': lng.toFixed(6),'coorY':lat.toFixed(6),'zoom':zoom.toFixed(2)}, function (data) {
+					data = JSON.parse(data);
+					$('#search-result').empty();
+					for(let val of data){
+						currentProposals.push(val[2]);
+						let coordinates = [val[0],val[1]]
 						var element = $("<li></li>")
 							.html(data[i])
 							.addClass('list-group-item')
@@ -82,7 +83,10 @@ $(document).ready(function() {
 								$('#searchName').val($(this).html());
 								$('#search-result').empty();
 								// params.onSubmit($('#searchName').val());
-								search();
+								map.flyTo({
+									center: coordinates
+									// zoom: zoom
+								});
 							})
 							.mouseenter(function() {
 								$(this).addClass('selected');
@@ -92,7 +96,16 @@ $(document).ready(function() {
 							});
 						$('#search-result').append(element);
 					}
-				}
+					
+				});			
+// 				var data = ['污染源1 ', '监测站1', '监测站2', '监测站3', '监测站4', '监测站5']
+// 				var patt1 = new RegExp(q);
+// 				for(var i in data){
+// 					if(patt1.test(data[i])){
+// 						
+// 						
+// 					}
+// 				}
 			}
 		}
 	});
@@ -102,3 +115,28 @@ $(document).ready(function() {
 	});
 
 });
+
+
+
+/* 隐藏侧边栏 */
+// $("body").toggleClass("sidebarCollapse");
+			
+				
+//打印地图
+function printMap(){
+
+ // navControl._compass.hidden = true;
+ $("#mapBox").addClass('bodyPrint');
+ map.removeControl(draw);//点线面
+ map.removeControl(miniMap);
+ map.removeControl(navControl);
+ window.print();
+ if(window.matchMedia('print'))
+ {
+	map.addControl(navControl);
+  map.addControl(draw);
+  map.addControl(miniMap,'bottom-right');
+	
+  $("#mapBox").removeClass('bodyPrint');
+ }
+}

@@ -99,7 +99,7 @@ var scale = new mapboxgl.ScaleControl({
 	maxWidth: 80,
 	unit: 'imperial'
 });
-map.addControl(scale,'bottom-right');
+map.addControl(scale);
 scale.setUnit('metric');
 map.on("load", function () {
   // Possible position values are 'bottom-left', 'bottom-right', 'top-left', 'top-right'
@@ -134,31 +134,31 @@ map.on("load", function () {
     });
 	map.addControl(miniMap, 'bottom-right')
 });
-//比例分级滑块
-var slider = document.getElementById("silder");
-slider.value = 10;
-var scale = slider.value;
-slider.onmousedown = function() {
-	slider.onmousemove = function() {
-		scale = slider.value;
-		map.zoomTo((+scale)/2+9);
-	}
-}
-$(".zoom").mouseenter(function() {
-		$(this).css({"cursor":"Pointer"});
-	})
-map.on('zoomend',function(e){
-	let zoom = map.getZoom();
-	var slider2 = document.getElementById("silder");
-	slider2.value = (+zoom-9)*2;
-})
-
-function changeValue(method) {
-	scale = slider.value;
-	if (method) {
-		slider.value = +scale - 1;
-	} else {
-		slider.value = +scale + 1;
-	}
-	map.zoomTo((+slider.value)/2+9);
-}
+////比例分级滑块
+//var slider = document.getElementById("silder");
+//slider.value = 10;
+//var scale = slider.value;
+//slider.onmousedown = function() {
+//	slider.onmousemove = function() {
+//		scale = slider.value;
+//		map.zoomTo((+scale)/2+9);
+//	}
+//}
+//$(".zoom").mouseenter(function() {
+//		$(this).css({"cursor":"Pointer"});
+//	})
+//map.on('zoomend',function(e){
+//	let zoom = map.getZoom();
+//	var slider2 = document.getElementById("silder");
+//	slider2.value = (+zoom-9)*2;
+//})
+//
+//function changeValue(method) {
+//	scale = slider.value;
+//	if (method) {
+//		slider.value = +scale - 1;
+//	} else {
+//		slider.value = +scale + 1;
+//	}
+//	map.zoomTo((+slider.value)/2+9);
+//}

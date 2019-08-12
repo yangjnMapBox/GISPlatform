@@ -1,5 +1,26 @@
 import os
 import math
+import psycopg2
+from configparser import ConfigParser
+
+#读取数据库配置文件
+const_cp = ConfigParser()
+const_cp.read("db.cfg")
+const_section = const_cp.sections()[0]
+const_dbCfg =const_cp.get(const_section, "database")
+const_userCfg = const_cp.get(const_section,"user")
+const_pdCfg = const_cp.get(const_section,"password")
+const_hostCfg = const_cp.get(const_section,"host")
+const_portCfg = const_cp.get(const_section,"port")
+#连接数据库
+def DatabaseConn():
+	conn = psycopg2.connect(database='water', user=const_userCfg, password=const_pdCfg, host=const_hostCfg,port=const_portCfg)
+	return conn
+#查询数据表结果,返回多行
+def GetDataFromTable(cursor,strSql):
+	cursor.execute(strSql)
+	return cursor.fetchall()
+
 #递归遍历目录下所有文件路径集合
 #path = "F:\\water_wyh\\json"
 def GetFilesFromPath(path):

@@ -6,6 +6,7 @@ from flask import Flask, render_template
 from flask import request
 from configparser import ConfigParser
 import run
+import math
 
 #读取配置文件
 cp = ConfigParser()
@@ -203,11 +204,37 @@ def ReturnLayerAtt(dictLayerGeoID,cursor):
 					bkname = row[1] if row[1] != None else 'Null'
 					reStr =reStr+ str(row[0])+','+bkname+';'
 	return reStr
-
-
-
-
-
+'''
+根据比例尺计算地图层级
+'''
+def CalZoomFromScale(scale):
+	zoom = 0
+	zoomRatio = 442943842.5/scale
+	while(zoomRatio/2>=1):
+		zoom+=1
+		zoomRatio = round(zoomRatio/2)
+	return zoom
+'''
+度转弧度
+'''
+def rad(d):
+	return d*math.pi/180.0
+'''
+计算两点距离
+输入两点经纬度坐标（单位度）
+输出距离（单位米）
+'''
+def CalDistanceP2P(lng1,lat1,lng2,lat2):
+	#地球半径，单位米
+	earthRadius = 6378137
+	radLat1 = rad(lat1)
+	radLat2 = rad(lat2)
+	subLat = radLat1 - radLat2
+	subLng = rad(lng1) - rad(lng2)
+	s = 2*math.asin(math.sqrt(math.pow(math.sin(subLat/2),2) + math.cos(radLat1)*math.cos(radLat2)
+							   *math.pow(math.sin(subLng/2),2)))
+	s = s * earthRadius
+	return s
 
 
 

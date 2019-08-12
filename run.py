@@ -6,6 +6,10 @@ from flask import Flask, render_template,url_for,session
 from flask import request
 from configparser import ConfigParser
 import datetime
+import CommonMethods
+import initCacheData
+import webFun
+import json
 
 #读取配置文件
 cp = ConfigParser()
@@ -33,12 +37,17 @@ global g_dictWaters
 # for row in rows:
 # 	g_dictWaters[row[0]] = [row[1],row[2],row[3],row[4]]
 
+
+
 #实例化
 app = Flask(__name__)
 
 # 路由
 @app.route('/')
 def index():
+	return render_template('index.html')
+@app.route('/gisMap')
+def gisMap():
 	return render_template('GISmap.html')
 @app.route('/dali')
 def dali():
@@ -56,6 +65,20 @@ def sourceInfo():
 @app.route('/guanlanhu')
 def guanlanhu():
     return render_template('guanlanhu.html')
+@app.route('/getSearchPOIJson')
+def getSearchPOIJson():
+	time1 =  datetime.datetime.now()
+	print (time1)
+	strSearch = request.args.get('strSearch','')
+	lng = request.args.get('lng','0')
+	lat = request.args.get('lat','0')
+	dictInput = {'strSearch':strSearch,'lng':lng,'lat':lat}
+	jsonInput = json.dumps(dictInput,ensure_ascii=False)
+	time2 = datetime.datetime.now()
+	print(time2)
+	subTime = time2-time1
+	print(subTime)
+	return webFun.GetPOIData(jsonInput,g_dictIndexDaliSearch,g_dictPOI)
 @app.route('/mapAttribution/')
 def mapAttribution():
 	starttime = datetime.datetime.now()
@@ -83,6 +106,20 @@ def mapAttribution():
 
 #程序入口
 if (__name__=='__main__'):
+	'''
+	poi信息数据初始化
+	key:recordid,value:[x,y,name,addresses]
+	'''
+	global g_dictPOI
+	g_dictPOI = initCacheData.InitPOI()
+	'''
+	poi索引数据初始化
+	key:codeAsc,value:[recordid]
+	'''
+	global g_dictIndexDaliSearch
+	g_dictIndexDaliSearch = initCacheData.InitIndexSearch()
+
+
 	app.run(
 	host = '0.0.0.0',
 	port = 5005,
