@@ -69,7 +69,7 @@ map.on('click','erhaiPollute',function(e){
 		.setHTML(strInfo)
 		.addTo(map);
 })
-map.on('mouseenter','erhaiPollute',function(){
+map.on('mousemove','erhaiPollute',function(){
 	map.getCanvas().style.cursor = 'pointer';
 });
 map.on('mouseleave','erhaiPollute',function(){
@@ -101,3 +101,18 @@ map.on('click','building_ex',function(e){
 		.setHTML(strInfo)
 		.addTo(map);
 })
+////poi图层点击事件
+//map.on('click','searchPOI',function(e){
+//	let info = e.features[0].properties;
+//	let coordinates = [e.lngLat["lng"],e.lngLat["lat"]];
+//	strInfo = info.name.toString()+'m²';
+//	new mapboxgl.Popup().setLngLat(coordinates)
+//		.setHTML(strInfo)
+//		.addTo(map);
+//})
+//map.on('mousemove','searchPOI',function(){
+//	map.getCanvas().style.cursor = 'pointer';
+//});
+//map.on('mouseleave','searchPOI',function(){
+//	map.getCanvas().style.cursor = '';
+//});

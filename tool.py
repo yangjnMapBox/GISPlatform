@@ -54,19 +54,23 @@ cursor = conn.cursor()
 #     cursor.execute(strSql)
 #     conn.commit()
 
-dict = {1:'a',2:'b',3:'c'}
-arrDictKeys = dict.keys()
-for i in list(dict):
-    if(i == 1):
-        del dict[i]
-    else:
-        print(dict)
+# dict = {1:'a',2:'b',3:'c'}
+# arrDictKeys = dict.keys()
+# for i in list(dict):
+#     if(i == 1):
+#         del dict[i]
+#     else:
+#         print(dict)
+#
+# time1 =  datetime.datetime.now()
+# time.sleep(2)
+# time2 =  datetime.datetime.now()
+# subTime = time2 -time1
+# print (time1)
+# print(time2)
+# print (subTime)
 
-time1 =  datetime.datetime.now()
-time.sleep(2)
-time2 =  datetime.datetime.now()
-subTime = time2 -time1
-print (time1)
-print(time2)
-print (subTime)
+arr = [1,2,3]
+s = ','.join(str(i) for i in arr)
+print (s)
 # print(c)

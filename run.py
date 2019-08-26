@@ -46,6 +46,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	return render_template('index.html')
+@app.route('/test')
+def test():
+	return render_template('test.html')
 @app.route('/gisMap')
 def gisMap():
 	return render_template('GISmap.html')
@@ -61,18 +64,20 @@ def addSources():
 @app.route('/customMap/addSources/sourceInfo')
 def sourceInfo():
 	return render_template('sourceInfo.html')
-
 @app.route('/guanlanhu')
 def guanlanhu():
     return render_template('guanlanhu.html')
+@app.route('/daliSpecial1')
+def daliSpecial1():
+    return render_template('dali_special1.html')
 @app.route('/getSearchPOIJson')
 def getSearchPOIJson():
 	time1 =  datetime.datetime.now()
 	print (time1)
 	strSearch = request.args.get('strSearch','')
-	lng = request.args.get('lng','0')
-	lat = request.args.get('lat','0')
-	dictInput = {'strSearch':strSearch,'lng':lng,'lat':lat}
+	coorX = request.args.get('coorX','0')
+	coorY = request.args.get('coorY','0')
+	dictInput = {'strSearch':strSearch,'lng':coorX,'lat':coorY}
 	jsonInput = json.dumps(dictInput,ensure_ascii=False)
 	time2 = datetime.datetime.now()
 	print(time2)

@@ -15,7 +15,7 @@ function waterDiffuse (intervalTime){
 	let currentImage = 90;
 	let i = 0
 	function getErhaiPath(){
-		return "/hbproject/image/erhairgba/erhai_"+currentImage+".png";
+		return "/static/image/erhairgba/erhai_"+currentImage+".png";
 	}
 	map.on('load', function () {
 		map.addSource("erhai", {

@@ -46,9 +46,9 @@ def GetSearchSet(centerX,centerY,strSearch,dictIndexDaliSearch,dictPOI):
 '''
 前台请求获取POI搜索结果
 参数-json：
-    strSearch:string, //用户输入的字符串（需去掉标点符号），为空的话返回-1
-    coorX:lng,        //当前地图视图的中心点坐标，保留到小数点后六位，坐标值不在大理返回-1
-    coorY:lat,
+    strSearch:string, //用户输入的字符串（需去掉标点符号），为空的话返回{error:-1}
+    coorX:lng,        //当前地图视图的中心点坐标，保留到小数点后六位，坐标值不在大理返回{error:-2}
+    coorY:lat,          //{}
     zoom:zoom         //当前地图层级
 返回值-json:  //recordid是poi唯一ID,x：经度(float),y:纬度(float)，
                 //name:poi名称(string)，address：poi地址(string)，tel：电话(string)，与coorCenter的距离
@@ -57,28 +57,33 @@ def GetSearchSet(centerX,centerY,strSearch,dictIndexDaliSearch,dictPOI):
     ...
 '''
 def GetPOIData(jsonData,dictIndexDaliSearch,dictPOI):
-    reJson = -1
+    reJson = '-1'
     try:
         dictJson = json.loads(jsonData)
         strSearch = dictJson['strSearch']
         if strSearch == '' or strSearch == None:
-            return  -1
+            return  '-1'
         centerX = float(dictJson['lng'])
         centerY = float(dictJson['lat'])
         #大理的经纬度范围
         if centerX<100 or centerX>100.4 or centerY<25.4 or centerY>26.1:
-             return -2
+             return '-2'
         reDictRecordidDis = GetSearchSet(centerY,centerX,strSearch,dictIndexDaliSearch,dictPOI)
         if len(reDictRecordidDis) == 0:
             return '{}'
         else:
             reDictJson = {}
+            tempCount = 0
+            print(len(reDictRecordidDis))
             for recordids in reDictRecordidDis:
+                tempCount+=1
                 recordid = recordids[0]
                 distance = recordids[1]
                 valueDictPOI = dictPOI[recordid]
                 reArray = [valueDictPOI[0],valueDictPOI[1],valueDictPOI[2],valueDictPOI[3],distance]
                 reDictJson[recordid] = reArray
+                if (tempCount >= 20):
+                    break
             reJson = json.dumps(reDictJson,ensure_ascii=False)
             return reJson
     except (OSError, TypeError) as reason:

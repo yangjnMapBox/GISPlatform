@@ -4,7 +4,7 @@
 let navControl = new mapboxgl.NavigationControl({
 		showZoom:false,
 });
-map.addControl(new mapboxgl.NavigationControl({showZoom:false,}));
+map.addControl(navControl);
 // map.addControl(new mapboxgl.GeolocateControl({
 // 	positionOptions: {
 // 		enableHighAccuracy: true
@@ -38,34 +38,20 @@ let daliStyle = {
 				"id": "background",
 				"type": "background",
 				"paint": {
-					"background-color": 'RGB(37,75,111)',
+					"background-color": 'RGB(245,245,245)',
+
 				}
 			},
 			{
 				'id':'district_dali_fill',
-				'type':'fill',
+				'type':'line',
 				'source':'dalimap',
 				'source-layer':'district_dali',
 				'paint':{
 					// 'fill-outline-color':"rgb(222,222,222)",
-					'fill-color':'RGB(146,175,202)',
-				},
-				'layout':{
-					'visibility':'visible'
+					'line-color':'RGB(81,87,89)',
 				}
 			},
-// 			{
-// 				'id':'district_dali_line',
-// 				'type':'line',
-// 				'source':'dalimap',
-// 				'source-layer':'district_dali',
-// 				'paint':{
-// 					'line-color':'RGB(222,222,222)',
-// 				},
-// 				'layout':{
-// 					'visibility':'visible'
-// 				}
-// 			},
 			{
 				'id':'bgd_water',
 				'type':'fill',
@@ -86,12 +72,42 @@ let daliStyle = {
 				'source-layer':'bgd',
 				"filter":["==","orderid",119],
 				'paint':{
-					'fill-color':"RGB(247,247,242)",
+					'fill-color':"RGB(245,245,245)",
 				},
 				'layout':{
 					// 'visibility':'none'
 				}
 			}
+		]
+	}
+let daliStyle2 = {
+		"version": 8,
+		// "glyphs": 'mapboxZITI/{fontstack}/{range}.pbf',
+		"sources": {
+			"dalimap": {
+				'type': 'raster',
+//				'scheme': 'tms',
+				'tiles': [
+					"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&" +
+					"service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
+					],
+				'tilesize':256
+			}
+		},
+		"layers": [
+			{
+				"id": "background",
+				"type": "background",
+				"paint": {
+					"background-color": 'RGB(242,239,232)',
+				}
+			},
+			{
+				'id':'raster_dali',
+				'type':'raster',
+				'source':'dalimap'
+			}
+
 		]
 	}
 //添加比例尺

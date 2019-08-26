@@ -20,35 +20,46 @@ var map = new mapboxgl.Map({
 		"sprite": getRootPath()+"static/sprite/sprite",
 		"glyphs": 'static/ziti/{fontstack}/{range}.pbf',
 		"sources": {
-			"raster": {
-				"type": "raster",
-				"tiles": [
-					"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&" +
-					"service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
-				],
-				"tilesize":256,
-			}
-		},
+			'dali_special1':{
+                'type':'raster',
+                'tiles':[
+                    "http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&" +
+                    "service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:special1"
+                ],
+                'tilesize':256
+            }
+        },
 		"layers": [
 			{
 				"id": "background",
 				"type": "background",
 				"paint": {
 					"background-color": 'RGB(242,239,232)',
+				},
+				"layout":{
+				    'visibility':'visible'
 				}
 			},
 			{
-				'id':'dali_resize',
-				'type':'raster',
-				'source':'raster',
-				'layout':{
-					'visibility':'none'
-				},
-			}
+                'id':'dali_special1',
+                'type':'raster',
+                'source':'dali_special1',
+                'layout':{
+                    'visibility':'none'
+                }
+            }
 		]
 	},
 });
 map.on('load', function () {
+	map.addSource('raster',{
+		'type':'raster',
+		'tiles':[
+			"http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&" +
+			"service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_resize_4_cj"
+		],
+		'tilesize':256
+	});
 	map.addSource('dali_cj',{
 		'type':'raster',
 		'tiles':[
@@ -57,11 +68,26 @@ map.on('load', function () {
 		],
 		'tilesize':256
 	});
-	
+	objLayerIDs["影像"].push("dali_resize");
+	map.addLayer({
+        'id':'dali_resize',
+        'type':'raster',
+        'source':'raster',
+        'paint':{
+            'raster-opacity':.5
+        },
+        'layout':{
+            'visibility':'none'
+        },
+    });
+    objLayerIDs["影像"].push("dali_cj");
 	map.addLayer({
 		'id':'dali_cj',
 		'type':'raster',
 		'source':'dali_cj',
+		'paint':{
+            'raster-opacity':.5
+        },
 		'layout':{
 			'visibility':'none'
 		}
@@ -75,6 +101,29 @@ map.on('load', function () {
 			// 'http://localhost:8070/geoserver/gwc/service/tms/1.0.0/water%3Awater0610@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf'
 		]
     });
+    map.addSource('dali_dem',{
+        'type':'raster-dem',
+        'tiles':[
+            "http://192.168.82.38:8080/geoserver/water/wms?bbox={bbox-epsg-3857}&styles=&transparent=true&format=image/png&" +
+            "service=WMS&version=1.1.1&request=GetMap&srs=EPSG:900913&width=256&height=256&layers=water:dali_dem",
+
+        ],
+        'tilesize':256
+    });
+    map.addLayer({
+        'id':'dali_dem',
+        'type':'hillshade',
+        'source':'dali_dem',
+        'paint':{
+            'hillshade-highlight-color':'RGB(255,255,0)',
+            'hillshade-shadow-color':'RGB(5,113,10)',
+            'hillshade-accent-color':'RGB(156,210,0)',
+        },
+        'layout':{
+            'visibility':'none',
+        }
+
+    });
 //	map.addSource('dali_vector2', {
 //		'type': 'vector',
 //		// 'scheme': 'tms',
@@ -84,6 +133,7 @@ map.on('load', function () {
 //			// 'http://localhost:8070/geoserver/gwc/service/tms/1.0.0/water%3Awater0610@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf'
 //			]
 //	});
+    objLayerIDs["行政区"].push("district_dali");
 	map.addLayer({
 		'id':'district_dali',
 		'type':'line',
@@ -94,10 +144,15 @@ map.on('load', function () {
 			'line-color':'RGB(81,87,89)',
 			'line-width':2,
 			'line-opacity':.8
-		}
+		},
+		"layout":{
+            'visibility':'visible'
+				}
 	});
+//	map.setLayoutProperty('district_dali','visibility','none');
     for(var i = 0;i<arrDaliBGDOrderid.length;i++)
     {
+        objLayerIDs["背景"].push('bgd'+arrDaliBGDOrderid[i].toString());
         map.addLayer({
             'id':'bgd'+arrDaliBGDOrderid[i].toString(),
             'type':'fill',
@@ -106,10 +161,11 @@ map.on('load', function () {
             "filter":["==","orderid",arrDaliBGDOrderid[i]],
             "minzoom": 8,
             'paint':{
+//                'fill-translate':[30,30],
                 'fill-color':arrDaliBGDColor[i],
             },
             'layout':{
-                // 'visibility':'none'
+                'visibility':'visible'
             }
         });
     }
@@ -117,6 +173,7 @@ map.on('load', function () {
 	//辅助道路
     for(let i = 0;i<arrRoadLevel.length;i++)
     {
+        objLayerIDs["道路"].push('roadSup_'+arrRoadLevel[i][0]);
         map.addLayer({
             'id':'roadSup_'+arrRoadLevel[i][0],
             'type':'line',
@@ -129,15 +186,23 @@ map.on('load', function () {
             ],
             "minzoom": arrRoadLevel[i][1],
             'paint':{
+//                    'line-gap-width':1,
                     'line-color':'rgb(155,155,155)',
                     'line-width':{
                         'stops':[[8,2],[19,4]]
                     }
-            }
+            },
+            "layout":{
+                    'line-cap':'round',
+                    'line-join':'round',
+                    'line-round-limit':1.5,
+                    'visibility':'visible'
+				}
         });
     }
     for(let i = 0;i<arrRoadLevel.length;i++)
     {
+        objLayerIDs["道路"].push('roadSup'+arrRoadLevel[i][0]);
         map.addLayer({
             'id':'roadSup'+arrRoadLevel[i][0],
             'type':'line',
@@ -154,12 +219,18 @@ map.on('load', function () {
                     'line-width':{
                         'stops':[[8,1.5],[19,3.5]]
                     }
-            }
+            },
+            "layout":{
+                    'line-cap':'round',
+                    'line-join':'round',
+                    'visibility':'visible'
+				}
         });
     }
     //次要道路
     for(let i = 0;i<arrRoadLevel.length;i++)
     {
+        objLayerIDs["道路"].push('roadMinor_'+arrRoadLevel[i][0]);
         map.addLayer({
             'id':'roadMinor_'+arrRoadLevel[i][0],
             'type':'line',
@@ -172,15 +243,22 @@ map.on('load', function () {
             ],
             "minzoom": arrRoadLevel[i][1],
             'paint':{
-                    'line-color':'rgb(155,155,155)',
-                    'line-width':{
-                        'stops':[[8,2],[19,10]]
-                    }
-            }
+
+                'line-color':'rgb(155,155,155)',
+                'line-width':{
+                    'stops':[[8,2],[19,10]]
+                }
+            },
+            "layout":{
+                    'line-cap':'round',
+                    'line-join':'round',
+                    'visibility':'visible'
+				}
         });
     }
     for(let i = 0;i<arrRoadLevel.length;i++)
     {
+        objLayerIDs["道路"].push('roadMinor'+arrRoadLevel[i][0]);
         map.addLayer({
             'id':'roadMinor'+arrRoadLevel[i][0],
             'type':'line',
@@ -193,16 +271,23 @@ map.on('load', function () {
             ],
             "minzoom": arrRoadLevel[i][1],
             'paint':{
-                    'line-color':'rgb(245,245,245)',
-                    'line-width':{
-                        'stops':[[8,1.5],[19,9]]
-                    }
+
+                'line-color':'rgb(245,245,245)',
+                'line-width':{
+                    'stops':[[8,1.5],[19,9]]
+                },
+            },
+            "layout":{
+                'line-cap':'round',
+                'line-join':'round',
+                'visibility':'visible'
             }
         });
     }
     //主要道路
     for(let i = 0;i<arrRoadLevel.length;i++)
     {
+        objLayerIDs["道路"].push('roadMain_'+arrRoadLevel[i][0]);
         map.addLayer({
             'id':'roadMain_'+arrRoadLevel[i][0],
             'type':'line',
@@ -215,15 +300,23 @@ map.on('load', function () {
             ],
             "minzoom": arrRoadLevel[i][1],
             'paint':{
-                    'line-color':'rgb(155,155,155)',
-                    'line-width':{
-                        'stops':[[8,2],[19,14]]
-                    }
-            }
+
+                'line-color':'rgb(155,155,155)',
+                'line-width':{
+                    'stops':[[8,2],[19,14]]
+                },
+
+            },
+            "layout":{
+                    'line-cap':'round',
+                    'line-join':'round',
+                    'visibility':'visible'
+				}
         });
     }
     for(let i = 0;i<arrRoadLevel.length;i++)
     {
+        objLayerIDs["道路"].push('roadMain'+arrRoadLevel[i][0]);
         map.addLayer({
             'id':'roadMain'+arrRoadLevel[i][0],
             'type':'line',
@@ -236,20 +329,26 @@ map.on('load', function () {
             ],
             "minzoom": arrRoadLevel[i][1],
             'paint':{
-                    'line-color':['match',['get','roadclass'],
-                        arrRoadColorMain[0][0],arrRoadColorMain[0][1],
-                        arrRoadColorMain[1][0],arrRoadColorMain[1][1],
-                        arrRoadColorMain[2][0],arrRoadColorMain[2][1],
-                        arrRoadColorMain[3][0],arrRoadColorMain[3][1],
-                        'rgb(255,255,255)'
-                    ],
-                    'line-width':{
-                        'stops':[[8,1.5],[19,13]]
-                    }
-            }
+
+                'line-color':['match',['get','roadclass'],
+                    arrRoadColorMain[0][0],arrRoadColorMain[0][1],
+                    arrRoadColorMain[1][0],arrRoadColorMain[1][1],
+                    arrRoadColorMain[2][0],arrRoadColorMain[2][1],
+                    arrRoadColorMain[3][0],arrRoadColorMain[3][1],
+                    'rgb(255,255,255)'
+                ],
+                'line-width':{
+                    'stops':[[8,1.5],[19,13]]
+                }
+            },
+            "layout":{
+                    'line-cap':'round',
+                    'line-join':'round',
+                    'visibility':'visible'
+				}
         });
     }
-
+    objLayerIDs["建筑"].push('building_ex');
 	map.addLayer({
 		'id': 'building_ex',
 		'source': 'dali_vector',
@@ -264,6 +363,9 @@ map.on('load', function () {
 //			},
             'fill-extrusion-opacity':0.8,
 		},
+		"layout":{
+            'visibility':'visible'
+        },
 		"interactive": true
 	})
 	
@@ -284,6 +386,7 @@ map.on('load', function () {
 	
 	for(var i =0;i<arrTextLevel.length;i++)
 	{
+	    objLayerIDs["文本"].push('text'+i.toString());
 	    let filter = ['in','level']
 	    for (let ii = 1;ii<arrTextLevel[i].length;ii++){
 	        filter.push(arrTextLevel[i][ii])
@@ -296,6 +399,7 @@ map.on('load', function () {
 			'minzoom':arrTextLevel[i][0],
 			'filter':filter,
 			'layout':{
+			    'visibility':'visible',
 				"icon-image":[
 					"match",
 					['get','typecode'],
@@ -338,187 +442,31 @@ map.on('load', function () {
 			}
 		})
 	}
-	map.addSource('flowLine' ,{
-		"type":"geojson",
-		"data":"static/json/draw_line.geojson",
-	})
-	map.addLayer({
-		'id':'flowLine',
-		'type':'line',
-		'source':'flowLine',
-		// 'source-layer':'road',
-		// "filter":["==","showgrade",i+1],
-		// "minzoom": arrRoadLevel[i],
-		'paint':{
-			'line-color':'RGB(0,0,0)',
-			// 'line-pattern':"airfield-15",
-
-		},
-		'layout':{
-			'visibility':'visible'
-		}
-	})
-
-
-
-//	map.addSource("skimg", {
-//	type: "image",
-//	url: "/hbproject/image/shuiku_132.jpg",
-//	coordinates: [
-//	[114.334615718,23.9991899009],
-//	[114.748875063, 23.9991899009],
-//	[114.748875063, 23.6981045009],
-//	[114.334615718, 23.6981045009]
-//	]
-//	});
-//	map.addLayer({
-//	    'id': "shuiku1",
-//        "type": "raster",
-//        "source": "skimg",
-//        "minzoom": 7,
-//        "paint": {
-//            "raster-fade-duration": 0
-//        },
-//        'layout':{
-//            'visibility':'none'
-//        }
-//	});
-
-// 	map.addLayer({
-// 		'id':'pointsymbol',
-// 		'source':'CLDSource',
-// 		'source-layer':'point',
-// 		'type':'symbol',
-// 		"minzoom": 7,
-// 		"layout": {
-// 			'text-field':"{name}",
-// 			'text-size':{'stops':[[8,10],[18,18]]},
-// 			'text-offset':[0,-1.7],
-// 			'text-font':["MicrosoftYaHeiRegular"],
-// 			'text-anchor':'top'
-// 		},
-// 		'paint': {
-// 			'text-color':'rgb(0,0,0)',
-// 			'text-halo-color':'rgb(0,0,0)',
-// 			'text-halo-width':0.15,
-// 			'text-halo-blur':0,
-// 		},
-// 	});
+    map.addLayer({
+        'id':'searchPOI',
+        'source':'dali_vector',
+        'source-layer':'poi',
+        'type':'symbol',
+        'filter':['==','recordid',''],
+        'layout':{
+            'visibility':'visible',
+            "icon-image":"location_1",
+            // "icon-offset":[0,0],
+            "icon-size":1,
+            // 'symbol-placement':"line",
+            'text-field':"{name}",
+            'text-size':11,
+            "text-offset":[0,2],
+            'text-font':['MicrosoftYaHeiRegular'],
+            'text-anchor':'bottom'
+        },
+        'paint':{
+            'text-color':'RGB(0,0,0)',
+            'text-halo-color':'RGB(253,253,254)',
+            'text-halo-width':0.7,
+            'text-halo-blur':0.7,
+        }
+    })
 });
-// //添加全国监测站数据源及图层
-// map.on('load',function(){
-//     map.addSource("RIMS",{
-//         "type":"geojson",
-// //        "buffer":0,
-// //        "tolerance":0.375,//简化容限(更高意味着更简单的几何结构和更快的性能)。
-//         "cluster":true,//聚类
-//         "clusterRadius":15,
-// //        "clusterMaxZoom":11,
-//         //"clusterProperties": //根据属性聚类
-//         "data":'json/allGeojson4.geojson'
-//     });
-//     map.loadImage("http://127.0.0.1:8848/hbproject/image/I.png",function(error,image){
-//         if(error) throw error;
-//         map.addImage('I',image);
-//         map.addLayer({
-//             'id':'rims_I',
-//             'source':'RIMS',
-//             'type':'symbol',
-//             "filter":["==","phquality","I"],
-//             "maxzoom":19,
-//             "layout":{
-//                 "icon-image":"I",
-//                 "icon-anchor":"bottom",
-//                 "icon-size":0.1,
-//                 'icon-allow-overlap':true,
-//                 'icon-ignore-placement':true,
-//                 // 'icon-rotation-alignment':'map',
-//                 // 'icon-pitch-alignment':"map",
-//             }
-//         })
-//     });
-//     map.loadImage("http://127.0.0.1:8848/hbproject/image/II.png",function(error,image){
-//         if(error) throw error;
-//         map.addImage('II',image);
-//         map.addLayer({
-//             'id':'rims_II',
-//             'source':'RIMS',
-//             'type':'symbol',
-//             "filter":["==","phquality","II"],
-//             "maxzoom":19,
-//             "layout":{
-//                 "icon-image":"II",
-//                 "icon-size":0.3,
-//                 "icon-anchor":"bottom",
-//                 'icon-allow-overlap':true,
-//                 'icon-ignore-placement':true,
-//                 // 'icon-rotation-alignment':'map',
-//                 // 'icon-pitch-alignment':"map",
-//             }
-//         })
-//     });
-//     map.loadImage("http://127.0.0.1:8848/hbproject/image/III.png",function(error,image){
-//         if(error) throw error;
-//         map.addImage('III',image);
-//         map.addLayer({
-//             'id':'rims_III',
-//             'source':'RIMS',
-//             'type':'symbol',
-//             "filter":["==","phquality","III"],
-//             "maxzoom":19,
-//             "layout":{
-//                 "icon-image":"III",
-//                 "icon-size":0.3,
-//                 "icon-anchor":"bottom",
-//                 'icon-allow-overlap':true,
-//                 'icon-ignore-placement':true,
-//                 // 'icon-rotation-alignment':'map',
-//                 // 'icon-pitch-alignment':"map",
-//             }
-//         })
-//     });
-//     map.loadImage("http://127.0.0.1:8848/hbproject/image/IV.png",function(error,image){
-//         if(error) throw error;
-//         map.addImage('IV',image);
-//         map.addLayer({
-//             'id':'rims_IV',
-//             'source':'RIMS',
-//             'type':'symbol',
-//             "filter":["==","phquality","IV"],
-//             "maxzoom":19,
-//             "layout":{
-//                 "icon-image":"IV",
-//                 "icon-size":0.3,
-//                 "icon-anchor":"bottom",
-//                 'icon-allow-overlap':true,
-//                 'icon-ignore-placement':true,
-//                 // 'icon-rotation-alignment':'map',
-//                 // 'icon-pitch-alignment':"map",
-//             }
-//         })
-//     });
-//     map.loadImage("http://127.0.0.1:8848/hbproject/image/V.png",function(error,image){
-//         if(error) throw error;
-//         map.addImage('V',image);
-//         map.addLayer({
-//             'id':'rims_V',
-//             'source':'RIMS',
-//             'type':'symbol',
-//             "icon-anchor":"bottom",
-//             "filter":["==","phquality","V"],
-//             "maxzoom":19,
-//             "layout":{
-//                 "icon-image":"V",
-//                 "icon-size":0.3,
-//                 'icon-allow-overlap':true,
-//                 'icon-ignore-placement':true,
-//                 // 'icon-rotation-alignment':'map',
-//                 // 'icon-pitch-alignment':"map",
-//             }
-//         })
-//     });
-// })
 
-//map.addControl(new mapboxgl.AttributionControl({
-//	compact: true
-//}));
+

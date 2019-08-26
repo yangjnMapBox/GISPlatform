@@ -1,396 +1,423 @@
 .layui-layout-right {
-				margin-right: 5%;
-			}
+    margin-right: 5%;
+}
 
-			.cld-addlayer {
-				box-sizing: border-box;
-				padding: 20px 15px 0px 20px;
-				text-align: left;
-				background: #3C3D3F;
-				/* margin-top: 10px; */
-			}
+.cld-addlayer {
+    box-sizing: border-box;
+    padding: 20px 15px 0px 20px;
+    text-align: left;
+    background: #3C3D3F;
+    /* margin-top: 10px; */
+}
 
-			.count {
-				padding: 10px 15px;
-				color: #999999;
-			}
+.count {
+    padding: 10px 15px;
+    color: #999999;
+}
 
-			.clear-both::after {
-				content: "";
-				display: block;
-				clear: both;
-			}
+.clear-both::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
-			.count .right {
-				float: right;
-				color: #999999;
-			}
+.count .right {
+    float: right;
+    color: #999999;
+}
 
-			.count a:hover {
-				color: #FFFFFF;
-			}
+.count a:hover {
+    color: #FFFFFF;
+}
 
-			.cld-hr {
-				box-sizing: border-box;
-				padding: 0 15px;
-
-
-			}
-
-			/* 隐藏滚动条 */
-			::-webkit-scrollbar {
-				width: 0 !important;
-				height: 0 !important;
-			}
-
-			.cld-nav {
-				/* height: 500px; */
-				/* background: #4A5060; */
-				overflow: auto;
-				-ms-overflow-style: none;
-				/*火狐下隐藏滚动条*/
-				scrollbar-width: none;
-			}
-
-			.layers {
-				max-height: 478px;
-			}
-
-			.layers .layer {
-				/* line-height: 100%; */
-				text-align: center;
-				padding: 5px;
-			}
-
-			.insertTarget {
-				border-top: 2px solid rgba(0, 150, 136, 0.5);
-			}
-
-			.cld-item {
-				border-bottom: 1px solid #212D3C;
-				background: #2F4056;
-			}
-
-			/* 左栏复选框 */
-			label {
-				font-size: 20px;
-				cursor: pointer;
-				font-weight: 300;
-				color: #fff;
-				margin-left: 20px;
-			}
-
-			label i {
-				font-size: 12px;
-				font-style: normal;
-				display: inline-block;
-				width: 12px;
-				height: 12px;
-				text-align: center;
-				line-height: 12px;
-				color: #fff;
-				vertical-align: middle;
-				margin: -2px 2px 1px 0px;
-				border: #00BFA5 1px solid;
-			}
-
-			label p {
-				display: inline-block;
-				width: 80px;
-				/* height: 24px; */
-				text-indent: 0.5em;
-			}
-
-			input[type="checkbox"] {
-				display: none;
-			}
-
-			input[type="checkbox"]:checked+i {
-				background: #00BFA5;
-			}
-
-			/* 数据图层列表 */
-			.cld-data {
-				max-height: 478px;
-			}
-
-			.cld-data dd {
-				text-align: center;
-				cursor: pointer;
-			}
-
-			.cld-data dd a.dataA {
-				display: none;
-
-			}
-
-			.cld-data dd a:hover {
-				color: #FF5722 !important;
-			}
-
-			.cld-data dd a i {
-				font-size: 16px;
-			}
-
-			.layers dd a {
-				display: inline !important;
-			}
-
-			/* 搜索框 */
-			.search {
-				width: 382px;
-				position: relative;
-				top: 10px;
-				left: 45%;
-				z-index: 25;
-			}
-
-			.input-group {
-				height: 40px;
-				margin: 0 auto;
-				border: 1px solid #2F4056;
-				box-sizing: border-box;
-			}
-
-			#searchName {
-				height: 38px;
-				width: 300px;
-				background: #2F4056;
-				font-size: 14px;
-				float: left;
-				border: 0px solid #2F4056;
-				/* 必须加 可能配合下一句使用 */
-				border-left: 1px solid #2F4056;
-				padding-left: 15px;
-				outline: none;
-				color: #D9D9D9;
-			}
-
-			#searchName:focus {
-				outline: none;
-			}
-
-			.input-group-btn {
-				float: right;
-			}
-
-			.input-group-btn button {
-				border-radius: 0;
-				color: #D9D9D9;
-			}
-
-			/* 选项样式 */
-			#search-result {
-				/* position: relative; */
-				overflow: auto;
-				max-height: 220px;
-				width: 82%;
-				margin: 1px 2px;
-				color: #E9E7E7;
-				background: #999;
-			}
-
-			#search-result li {
-				border-top: 1px solid #999999;
-				padding: 0 10px;
-				line-height: 34px;
-			}
-
-			li.selected {
-				cursor: pointer;
-				color: #E9E7E7;
-				background: RGB(0, 191, 165)
-			}
-
-			/* .layui-cldbtn-group{
-							width: 30px;
-							float: left;
-							margin: 6px;
-						}
-						.layui-cldbtn-group button{
-							display: block;
-							margin: 0px !important;
-							border-radius: 0 !important;
-							height: 15px;
-							width: 25px;
-							line-height: 15px;
-							padding: 1px 1px 1px 2px !important;
-							background: rgba();
-						} */
-			/* <div class="layui-cldbtn-group"><button type="button"class="layui-btn layui-btn-xs"><i class="layui-icon layui-icon-up"></i></button><button type="button"class="layui-btn layui-btn-xs"><i class="layui-icon layui-icon-down"></i></button></div> */
-
-			.layui-body {
-				height: calc(100% - 60px);
-			}
-
-			.bodyPrint {
-				position: absolute !important;
-				z-index: 1001;
-				top: 0px !important;
-				left: 0px !important;
-				height: 100%;
-				width: 100%;
-			}
+.cld-hr {
+    box-sizing: border-box;
+    padding: 0 15px;
 
 
-			#map {
-				position: absolute;
-				/* top: 0; */
-				bottom: 0;
-				width: 100%;
-				height: 100%;
-			}
+}
 
-			.calculation-box {
-				height: 30px;
-				width: 100px;
-				position: absolute;
-				bottom: 50px;
-				left: 0%;
-				background-color: rgba(255, 255, 255, 0);
-				padding: 5px;
-				text-align: center;
-			}
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
 
-			/* 自定义滑块 */
-			.range-group {
-				position: absolute;
-				bottom: 120px;
-				right: 0px;
-				width: 150px;
-				height: 150px;
-				margin: 100px 100px;
-			}
+.cld-nav {
+    /* height: 500px; */
+    /* background: #4A5060; */
+    overflow: auto;
+    -ms-overflow-style: none;
+    /*火狐下隐藏滚动条*/
+    scrollbar-width: none;
+}
 
-			.zoom {
-				border: 1px solid #797972 !important;
-				background: white;
-				font-weight: bolder;
-				display: block;
-				width: 35px;
-				border-radius: 0px !important;
-				width: 30px;
-				height: 30px;
-			}
+.layers {
+    max-height: 478px;
+}
 
-			#addon1 {
-				padding: 5px;
-				position: absolute;
-				left: 211px;
-				top: 47px;
-				border-top: 1px solid #ccc !important;
+.layers .layer {
+    /* line-height: 100%; */
+    text-align: center;
+    padding: 5px;
+}
 
-			}
+.insertTarget {
+    border-top: 2px solid rgba(0, 150, 136, 0.5);
+}
 
-			#addon2 {
-				border-bottom: 1px solid #ccc !important;
-				padding: 5px 5px;
-				position: absolute;
-				left: 211px;
-				top: -73px;
-			}
+.cld-item {
+    border-bottom: 1px solid #212D3C;
+    background: #2F4056;
+}
 
-			input[type=range] {
-				/* margin-top: 14px; */
-				-webkit-appearance: none;
-				/*清除系统默认样式*/
-				width: 60%;
-				background: -webkit-linear-gradient(#000000, #61bd12) no-repeat, #ddd;
-				background-size: 100%;
-				height: 4px;
-				/*横条的高度*/
-				outline: none;
-				transform: rotate(-90deg);
-				-ms-transform: rotate(-90deg);
-				-moz-transform: rotate(-90deg);
-				-webkit-transform: rotate(-90deg);
-				-o-transform: rotate(-90deg);
-				position: absolute;
-				left: 181px;
-			}
+/* 左栏复选框 */
+label {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 20px;
+}
 
-			/*拖动块的样式*/
-			input[type=range]::-webkit-slider-thumb {
-				-webkit-appearance: none;
-				/*清除系统默认样式*/
-				height: 23px;
-				/*拖动块高度*/
-				width: 6px;
-				/*拖动块宽度*/
-				background: #fff;
-				/*拖动块背景*/
-				/* border-radius: 50%; /*外观设置为圆形*/
-				border: solid 1px #000;
-				/*设置边框*/
-			}
+label i {
+    font-size: 12px;
+    font-style: normal;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    line-height: 12px;
+    color: #fff;
+    vertical-align: middle;
+    margin: -2px 2px 1px 0px;
+    border: #00BFA5 1px solid;
+}
 
-			/* 上传组件 */
-			.inputfile {
-				width: 0.1px;
-				height: 0.1px;
-				opacity: 0;
-				overflow: hidden;
-				position: absolute;
-				z-index: -1;
-			}
+label p {
+    display: inline-block;
+    width: 80px;
+    /* height: 24px; */
+    text-indent: 0.5em;
+}
 
-			.inputfile+label {
-				display: block;
-				padding: 0px 20px;
-				margin-left: 0;
-				color: black;
+input[type="checkbox"] {
+    display: none;
+}
 
-			}
+input[type="checkbox"]:checked+i {
+    background: #00BFA5;
+}
 
-			.inputfile:focus+label,
-			.inputfile+label:hover {
-				/* border: 1px solid #00A1CB; */
-				cursor: pointer;
-			}
+/* 数据图层列表 */
+.cld-data {
+    max-height: 478px;
+}
 
-			/* 地图点击框 */
-			.mapboxgl-popup-content {
-				box-shadow: 0px 0px 5px #6575A9;
-				padding: 10px;
-			}
+.cld-data dd {
+    text-align: center;
+    cursor: pointer;
+}
 
-			table.popTable {
-				font-family: verdana, arial, sans-serif;
-				font-size: 11px;
-				color: #333333;
-				border-width: 1px;
-				border-color: #BFBFBF;
-				border-collapse: collapse;
-			}
+.cld-data dd a.dataA {
+    display: none;
 
-			table.popTable th {
-				border-width: 1px;
-				padding: 8px;
-				border-style: solid;
-				border-color: #BFBFBF;
-				background-color: #dedede;
-			}
+}
 
-			table.popTable td {
-				border-width: 1px;
-				padding: 8px;
-				border-style: solid;
-				border-color: #BFBFBF;
-				background-color: #ffffff;
+.cld-data dd a:hover {
+    color: #FF5722 !important;
+}
 
-			}
+.cld-data dd a i {
+    font-size: 16px;
+}
 
-			table.popTable td input {
-				border: none;
-			}
+.layers dd a {
+    display: inline !important;
+}
 
-			.mapboxgl-popup-content .comf {
-				margin-top: 15px;
-				/* padding-top: 10px;
-					border-top: 1px solid #008000; */
-			}
+/* 搜索框 */
+.search {
+    width: 325px;
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    z-index: 25;
+}
 
-			.mapboxgl-popup-content .comf button.btn-success {
-				border: none;
-				margin-top: 1px;
-			}
+.input-group {
+    height: 30px;
+    margin: 0 auto;
+    border: 1px solid #2F4056;
+    box-sizing: border-box;
+}
+
+#searchName {
+    height: 30px;
+    width: 260px;
+    background: #2F4056;
+    font-size: 14px;
+    float: left;
+    border: 0px solid #2F4056;
+    /* 必须加 可能配合下一句使用 */
+    border-left: 1px solid #2F4056;
+    padding-left: 15px;
+    outline: none;
+    color: #D9D9D9;
+}
+
+#searchName:focus {
+    outline: none;
+}
+
+.input-group-btn {
+    float: right;
+}
+
+.input-group-btn button {
+    border-radius: 0;
+    color: #D9D9D9;
+}
+
+/* 选项样式 */
+#search-result {
+    /* position: relative; */
+    overflow: auto;
+    max-height: 160px;
+    width: 60%;
+    margin: 1px 2px;
+    color: #E9E7E7;
+    background: #999;
+}
+
+#search-result li {
+    border-top: 1px solid #999999;
+    padding: 0 1px;
+    line-height: 20px;
+    overflow: hidden;text-overflow: ellipsis; white-space: nowrap;
+}
+
+li.selected {
+    cursor: pointer;
+    color: #E9E7E7;
+    background: RGB(0, 191, 165)
+}
+
+/* .layui-cldbtn-group{
+                width: 30px;
+                float: left;
+                margin: 6px;
+            }
+            .layui-cldbtn-group button{
+                display: block;
+                margin: 0px !important;
+                border-radius: 0 !important;
+                height: 15px;
+                width: 25px;
+                line-height: 15px;
+                padding: 1px 1px 1px 2px !important;
+                background: rgba();
+            } */
+/* <div class="layui-cldbtn-group"><button type="button"class="layui-btn layui-btn-xs"><i class="layui-icon layui-icon-up"></i></button><button type="button"class="layui-btn layui-btn-xs"><i class="layui-icon layui-icon-down"></i></button></div> */
+
+.layui-body {
+    height: calc(100% - 60px);
+}
+
+.bodyPrint {
+    position: absolute !important;
+    z-index: 1001;
+    top: 0px !important;
+    left: 0px !important;
+    height: 100%;
+    width: 100%;
+}
+
+
+#map {
+    position: absolute;
+    /* top: 0; */
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#calculated-area{
+    padding-top: 15px;
+    position:absolute;
+    text-align:center;
+    width:200px;
+    height: 60px;
+}
+#calculated-area p{
+    height:60px;
+    margin:0;
+    padding:0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left
+}
+
+/* 自定义滑块 */
+.range-group {
+    position: absolute;
+    bottom: 120px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    margin: 100px 100px;
+}
+
+.zoom {
+    border: 1px solid #797972 !important;
+    background: white;
+    font-weight: bolder;
+    display: block;
+    width: 35px;
+    border-radius: 0px !important;
+    width: 30px;
+    height: 30px;
+}
+
+#addon1 {
+    padding: 5px;
+    position: absolute;
+    left: 211px;
+    top: 47px;
+    border-top: 1px solid #ccc !important;
+
+}
+
+#addon2 {
+    border-bottom: 1px solid #ccc !important;
+    padding: 5px 5px;
+    position: absolute;
+    left: 211px;
+    top: -73px;
+}
+
+input[type=range] {
+    /* margin-top: 14px; */
+    -webkit-appearance: none;
+    /*清除系统默认样式*/
+    width: 60%;
+    background: -webkit-linear-gradient(#000000, #61bd12) no-repeat, #ddd;
+    background-size: 100%;
+    height: 4px;
+    /*横条的高度*/
+    outline: none;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    position: absolute;
+    left: 181px;
+}
+
+/*拖动块的样式*/
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /*清除系统默认样式*/
+    height: 23px;
+    /*拖动块高度*/
+    width: 6px;
+    /*拖动块宽度*/
+    background: #fff;
+    /*拖动块背景*/
+    /* border-radius: 50%; /*外观设置为圆形*/
+    border: solid 1px #000;
+    /*设置边框*/
+}
+
+/* 上传组件 */
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    display: block;
+    padding: 0px 20px;
+    margin-left: 0;
+    color: black;
+
+}
+
+.inputfile:focus+label,
+.inputfile+label:hover {
+    /* border: 1px solid #00A1CB; */
+    cursor: pointer;
+}
+
+/* 地图点击框 */
+.mapboxgl-popup-content {
+    box-shadow: 0px 0px 5px #6575A9;
+    padding: 10px;
+}
+
+table.popTable {
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #BFBFBF;
+    border-collapse: collapse;
+}
+
+table.popTable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #BFBFBF;
+    background-color: #dedede;
+}
+
+table.popTable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #BFBFBF;
+    background-color: #ffffff;
+
+}
+
+table.popTable td input {
+    border: none;
+}
+
+.mapboxgl-popup-content .comf {
+    margin-top: 15px;
+    /* padding-top: 10px;
+        border-top: 1px solid #008000; */
+}
+
+.mapboxgl-popup-content .comf button.btn-success {
+    border: none;
+    margin-top: 1px;
+}
+
+.boxdraw {
+    background: rgba(56, 135, 190, 0.1);
+    border: 1.5px solid #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+#cldLogo{
+    position:absolute;
+    /*background:#D84A4A;*/
+    top:16px;
+    left:20px;
+    display:block;
+    height:25px;
+    width:200px;
+    color:RGB(245,246,247);
+    font:23px Georgia, "Times New Roman", Times, serif; text-decoration:none;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="{{ url_for('static',filename='layui/css/layui.css') }}" />
+		<script src="{{ url_for('static',filename='jquery/dist/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='layui/layui.js') }}"></script>
+		<link href="{{ url_for('static',filename='css/mapbox-gl-1.2.0.css') }}" rel='stylesheet' />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/mapbox-gl-draw.css') }}">
+		<script src="{{ url_for('static',filename='js/mapbox-gl_v1.2.0.js') }}"></script>
+		<script type="text/javascript" charset="UTF-8" src="{{ url_for('static',filename='js/FileSaver.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/mapboxgl-control-minimap.js') }}"></script>
+		<script type="{{ url_for('static',filename='text/javascript" src="js/jquery.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/mapbox-gl-draw.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/truf.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/d3.v3.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/echarts.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/index.css') }}"/>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<!--<div class="layui-logo">大理水质监测平台</div>-->
+				<div class="cldLogo" id="cldLogo"><strong>大理水质监测平台</strong></div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<!--<ul class="layui-nav layui-layout-left">-->
+					<!--<li class="layui-nav-item">-->
+                        <!--<div id='calculated-area'></div>-->
+                    <!--</li>-->
+				<!--</ul>-->
+
+				<div class="search">
+					<div class="input-group">
+						<input type="text" id="searchName" class="form-control" placeholder="请输入...">
+						<!--<input type="text" id="searchName" class="layui-input" placeholder="请输入...">-->
+						<span class="input-group-btn" id='btnSearch' onclick="search()">
+							<button class="layui-btn layui-btn-sm" type="button">搜索</button>
+						</span>
+
+					</div>
+					<ul class="list-group" id='search-result'>
+					</ul>
+				</div>
+				<!--<div class="layui-form-select">-->
+					<!--<div class="layui-select-title">-->
+						<!--<input type="text" id="searchName" class="layui-input" placeholder="请输入...">-->
+						<!--<span class="input-group-btn" id='btnSearch' onclick="search()">-->
+							<!--<button class="layui-btn" type="button">搜索</button>-->
+						<!--</span>-->
+					<!--</div>-->
+				<!--</div>-->
+
+
+				<!--<ul class="layui-nav layui-layout-right">-->
+					<!--<li class="layui-nav-item">-->
+						<!--<a href="javascript:;">-->
+							<!--菜单-->
+						<!--</a>-->
+						<!--&lt;!&ndash;<dl class="layui-nav-child ">&ndash;&gt;-->
+							<!--&lt;!&ndash;<dd><a href="javascript:;" style="padding: 0;">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<input type="file" name="inputGeojson[]" id="inputGeojson" class="inputfile inputfile-1" data-multiple-caption="{count} files selected"&ndash;&gt;&ndash;&gt;-->
+									 <!--&lt;!&ndash;&lt;!&ndash;multiple />&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<label for="inputGeojson">上传</label>&ndash;&gt;&ndash;&gt;-->
+								<!--&lt;!&ndash;&lt;!&ndash;</a></dd>&ndash;&gt;&ndash;&gt;-->
+							<!--&lt;!&ndash;&lt;!&ndash;<dd><a href="javascript:;" id="saveGeojson">导出</a></dd>&ndash;&gt;&ndash;&gt;-->
+							<!--&lt;!&ndash;&lt;!&ndash;<dd><a href="javascript:;" onclick="printMap()">打印</a></dd>&ndash;&gt;&ndash;&gt;-->
+						<!--&lt;!&ndash;</dl>&ndash;&gt;-->
+					<!--</li>-->
+				<!--</ul>-->
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+						<!--&lt;!&ndash; 添加按钮 &ndash;&gt;-->
+						<!--<li class="layui-nav-item cld-addlayer">-->
+							<!--<button type="button" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-add-1"></i> 数据</button>-->
+							<!--<button type="button" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-add-1"></i> 图层</button>-->
+						<!--</li>-->
+						<!--<hr class="layui-bg-green">-->
+						<!--<div class="count clear-both">-->
+							<!--<span class="left">35图层</span>-->
+							<!--<a href="javascript:;" class="right">-->
+								<!--<span class="layui-icon layui-icon-senior">&nbsp;过滤</span>-->
+							<!--</a>-->
+							<!--<hr class="layui-bg-gray" style="background: #999999 !important;">-->
+						<!--</div>-->
+						<li class="layui-nav-item cld-hr">
+							<ul class="layui-nav layui-nav-tree layui-bg-cyan layui-inlin" id="side" style="width: 170px; height: 570px; overflow: hidden;background: #212D3C !important;">
+								<!-- 数据源列表 -->
+								<!--<li class="">-->
+									<!--<a class="cld-item" href="javascript:;">数据源</a>-->
+									<!--<dl class="layui-nav-child cld-data cld-nav" style="background-color: rgba(0,0,0,0) !important;" id="dataSour">-->
+										<!--<dd onclick="">数据1-->
+											<!--<a><i class="layui-icon layui-icon-close"></i></a>-->
+										<!--</dd>-->
+									<!--</dl>-->
+								<!--</li>-->
+								<!-- 功能管理 -->
+								<!--<li class="layui-nav-item">-->
+								<li >
+								  <a class="cld-item" href="javascript:;">功能管理</a>
+								  <dl class="layui-nav-child">
+									<dd><input type="file" name="inputGeojson[]" id="inputGeojson" class="inputfile inputfile-1" data-multiple-caption="{count} files selected"
+									 multiple /></dd>
+									<dd><label for="inputGeojson">上传</label></dd>
+									<dd><a href="javascript:;" id="saveGeojson">导出</a></dd>
+									<dd><a href="javascript:;" onclick="printMap()">打印</a></dd>
+								  </dl>
+								</li>
+								<!-- 图层列表 -->
+								<!--<li class=" layui-nav-item">-->
+								<li >
+									<a href="javascript:;" class="cld-item">图层管理</a>
+									<dl class="layui-nav-child layers cld-nav " id="view" style="background-color: rgba(0,0,0,0) !important;">
+										<dd draggable="true">
+											<label>
+												<input type="checkbox" id="" class="layerCheck" onclick="layerCheckClick(this.id,this.checked)" checked="checked">
+												<i>✓</i>
+												<p>监测站1</p>
+											</label>
+											<a href="javascript:;" onclick="layerTetail(this.id)" id="layer1"><i class="layui-icon layui-icon-spread-left"></i></a>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</li>
+						<div id='calculated-area'></div>
+					</ul>
+				</div>
+			</div>
+
+			<div class="layui-body" id="mapBox">
+				<!-- 内容主体区域 -->
+				<div id="map"></div>
+
+			</div>
+		</div>
+        <script src="{{ url_for('static',filename='dist/methods.js') }}"></script>
+		<script src="{{ url_for('static',filename='dist/map_dali_special1.js') }}"></script>
+		<!--<script src="{{ url_for('static',filename='dist/getMapAttribution.js') }}"></script>-->
+		<!--<script src="{{ url_for('static',filename='dist/addControls.js') }}"></script>-->
+		<!--<script src="{{ url_for('static',filename='dist/draw.js') }}"></script>-->
+		<!--<script src="{{ url_for('static',filename='dist/animatedPoint.js') }}"></script>-->
+        <!--<script src="{{ url_for('static',filename='dist/LayerControl.js') }}"></script>-->
+		<!--<script src="{{ url_for('static',filename='dist/caseSelect.js') }}"></script>-->
+		<!--<script src="{{ url_for('static',filename='dist/search.js') }}"></script>-->
+
+		<!-- 图层列表模板 -->
+		<script type="text/html" id="demo2">
+			{{ "{{#  layui.each(d.list, function(index, item){ }}"}}
+			{{ "{{# item.name=item.name.substr(0, 5) }} " }}
+			<dd draggable='true'>
+				<label>
+				<input type='checkbox' id={{ "{{ item.id }}" }} class='layerCheck' onclick='layerCheckClick(this.id,this.checked)'>
+				<i>✓</i><p>{{ "{{ item.name }}" }}</p>
+				</label>
+				<a href='javascript:;' onclick='layerTetail(this)' id='{{ "{{ item.id }}" }}'>
+					<i class='layui-icon layui-icon-spread-left'></i>
+				</a>
+			</dd>
+			{{ " {{#  }); }} "}}
+		</script>
+		<!-- 数据列表模板 -->
+		<script type="text/text/html" id="demo1">
+			{{ "{{#  layui.each(d.list, function(index, item){ }} "}}
+			{{ "{{# item.name=item.name.substr(0, 5) }}"|replace("&lt;", '<') }}
+			<dd onclick='clickData(this)' id={{ "{{item.id}}" }}>{{ "{{item.name}}" }}
+				<a class='dataA'><i class='layui-icon layui-icon-close'></i></a>
+			</dd>
+			{{  "{{#  }); }}"}}
+		</script>
+		<script src="{{ url_for('static',filename='dist/index.js') }}"></script>
+	</body>
+</html>

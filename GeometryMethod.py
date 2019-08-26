@@ -5,21 +5,7 @@ import psycopg2
 from flask import Flask, render_template
 from flask import request
 from configparser import ConfigParser
-import run
 import math
-
-#读取配置文件
-cp = ConfigParser()
-cp.read("db.cfg")
-section = cp.sections()[0]
-dbCfg =cp.get(section, "database")
-userCfg = cp.get(section,"user")
-pdCfg = cp.get(section,"password")
-hostCfg = cp.get(section,"host")
-portCfg = cp.get(section,"port")
-#连接数据库
-# conn = psycopg2.connect(database='water', user=userCfg, password=pdCfg, host=hostCfg,port=portCfg)
-# cursor = conn.cursor()
 
 '''
 判断点是否被面包含（包括在面的边上），返回True,被面包含，返回false,不被面包含

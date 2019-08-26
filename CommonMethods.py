@@ -3,17 +3,17 @@ import math
 import psycopg2
 from configparser import ConfigParser
 
-#读取数据库配置文件
-const_cp = ConfigParser()
-const_cp.read("db.cfg")
-const_section = const_cp.sections()[0]
-const_dbCfg =const_cp.get(const_section, "database")
-const_userCfg = const_cp.get(const_section,"user")
-const_pdCfg = const_cp.get(const_section,"password")
-const_hostCfg = const_cp.get(const_section,"host")
-const_portCfg = const_cp.get(const_section,"port")
 #连接数据库
 def DatabaseConn():
+	# 读取数据库配置文件
+	const_cp = ConfigParser()
+	const_cp.read("E:/python/GISProject/GIS/db.cfg")
+	const_section = const_cp.sections()[0]
+	const_dbCfg = const_cp.get(const_section, "database")
+	const_userCfg = const_cp.get(const_section, "user")
+	const_pdCfg = const_cp.get(const_section, "password")
+	const_hostCfg = const_cp.get(const_section, "host")
+	const_portCfg = const_cp.get(const_section, "port")
 	conn = psycopg2.connect(database='water', user=const_userCfg, password=const_pdCfg, host=const_hostCfg,port=const_portCfg)
 	return conn
 #查询数据表结果,返回多行

@@ -347,9 +347,11 @@ map.on('load',function(){
 	map.addImage('pulsing-dot3',pulsingDot3,{pixelRatio:3});
 	map.addImage('pulsing-dot4',pulsingDot4,{pixelRatio:3});
 	map.addImage('pulsing-dot5',pulsingDot5,{pixelRatio:3});
+	objLayerIDs["监测站"].push('erhaiPollute');
 	map.addLayer({
 		'id':'erhaiPollute',
 		'type':'symbol',
+		'minzoom':11.5,
 		'source':{
 			'type':'geojson',
 			'data':{
@@ -382,18 +384,22 @@ map.on('load',function(){
 			}
 		},
 		'layout':{
+		    'visibility':'visible',
 			'icon-image':'pulsing-dot',
 			// 'visibility':'none'
 		}
 	})
 	for (let i =0;i<5;i++)
 	{
+	    objLayerIDs["监测站"].push('erhaiStation'+(i+1).toString());
 		map.addLayer({
 			'id':'erhaiStation'+(i+1).toString(),
 			'type':'symbol',
+			'minzoom':11.5,
 			'filter':["==","phquality",levelArr[i]],
 			'source':'erhaiRIMS',
 			'layout':{
+			    'visibility':'visible',
 				'icon-image':'pulsing-dot'+(i+1).toString(),
 				// 'visibility':'none'
 			}

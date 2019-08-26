@@ -1,4 +1,3 @@
-
 function layerCheck1OnClick(){
 	let chkLayerCheck1 = document.getElementById('layerCheck1');
 	if (chkLayerCheck1.checked)

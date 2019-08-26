@@ -13,7 +13,8 @@ var draw = new MapboxDraw({
 	userProperties:true,
 });
 map.addControl(draw);
-map.on('draw.create', drawFunc);
+//map.on('draw.create', drawFunc);
+map.on('draw.create', updateArea);
 map.on('draw.delete', updateArea);
 map.on('draw.update', updateArea);
 //点击显示画的geojson的坐标/长度/面积
@@ -27,15 +28,15 @@ map.on('click',function(e){
 				reValue = (turf.area(data.features[0])/1000000).toFixed(2).toString()+"km2";
 				break;
 			case "Point":
-				reValue1 = data.features[0]['geometry']['coordinates'][0].toFixed(6);
-				reValue2 = data.features[0]['geometry']['coordinates'][1].toFixed(6);
-				reValue = reValue1+'<br />'+reValue2
+				reValue1 = data.features[0]['geometry']['coordinates'][0].toFixed(3);
+				reValue2 = data.features[0]['geometry']['coordinates'][1].toFixed(3);
+				reValue = reValue1+' '+reValue2
 				break;
 			case "LineString":
 				reValue = turf.length(data.features[0]).toFixed(2).toString()+"km";
 				break;
 		}
-		answer.innerHTML = '<p><strong>' + reValue + '</strong></p>';
+		answer.innerHTML = '<p>' + reValue + '</p>';
 	}
 })
 //添加用户自定义图层数据
