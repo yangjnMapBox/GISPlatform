@@ -51,9 +51,10 @@ def GetSearchSet(centerX,centerY,strSearch,dictIndexDaliSearch,dictPOI):
     coorY:lat,          //{}
     zoom:zoom         //当前地图层级
 返回值-json:  //recordid是poi唯一ID,x：经度(float),y:纬度(float)，
-                //name:poi名称(string)，address：poi地址(string)，tel：电话(string)，与coorCenter的距离
-    recordid1:[lng,lat,名称,地址,电话,距离（米）],
-    recordid2:[lng,lat,名称,地址,电话,距离（米）]
+                //name:poi名称(string),address：poi地址(string),tel：电话(string)，与coorCenter的距离,
+                //mask:取值0/1/2,0被地址包含，1被名称包含，2被二者同时包含
+    recordid1:[lng,lat,名称,地址,电话,距离（米）,mask],
+    recordid2:[lng,lat,名称,地址,0/1,电话,距离（米）,mask]
     ...
 '''
 def GetPOIData(jsonData,dictIndexDaliSearch,dictPOI):
@@ -80,6 +81,25 @@ def GetPOIData(jsonData,dictIndexDaliSearch,dictPOI):
                 recordid = recordids[0]
                 distance = recordids[1]
                 valueDictPOI = dictPOI[recordid]
+                name = valueDictPOI[2]
+                address = valueDictPOI[3]
+                #判断输入待搜索字符串是被name包含还是被address包含
+                blnName = True
+                blnAddress = True
+                mask = -1
+                for char in strSearch:
+                    if char not in (name):
+                        blnName = False
+                        break
+                    if char not in (address):
+                        blnAddress = False
+                        break
+                if(blnName and blnAddress ):
+                    mask = 2
+                elif(blnName):
+                    mask = 1
+                else:
+                    mask = 0
                 reArray = [valueDictPOI[0],valueDictPOI[1],valueDictPOI[2],valueDictPOI[3],distance]
                 reDictJson[recordid] = reArray
                 if (tempCount >= 20):

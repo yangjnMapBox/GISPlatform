@@ -37,7 +37,18 @@ global g_dictWaters
 # for row in rows:
 # 	g_dictWaters[row[0]] = [row[1],row[2],row[3],row[4]]
 
-
+'''
+poi信息数据初始化
+key:recordid,value:[x,y,name,addresses]
+'''
+global g_dictPOI
+g_dictPOI = initCacheData.InitPOI()
+'''
+poi索引数据初始化
+key:codeAsc,value:[recordid]
+'''
+global g_dictIndexDaliSearch
+g_dictIndexDaliSearch = initCacheData.InitIndexSearch()
 
 #实例化
 app = Flask(__name__)
@@ -46,6 +57,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	return render_template('index.html')
+@app.route('/index2')
+def index2():
+	return render_template('index2.html')
 @app.route('/test')
 def test():
 	return render_template('test.html')
@@ -70,6 +84,9 @@ def guanlanhu():
 @app.route('/daliSpecial1')
 def daliSpecial1():
     return render_template('dali_special1.html')
+@app.route('/daliSpecial2')
+def daliSpecial2():
+    return render_template('dali_special2.html')
 @app.route('/getSearchPOIJson')
 def getSearchPOIJson():
 	time1 =  datetime.datetime.now()
@@ -115,14 +132,14 @@ if (__name__=='__main__'):
 	poi信息数据初始化
 	key:recordid,value:[x,y,name,addresses]
 	'''
-	global g_dictPOI
-	g_dictPOI = initCacheData.InitPOI()
+	# global g_dictPOI
+	# g_dictPOI = initCacheData.InitPOI()
 	'''
 	poi索引数据初始化
 	key:codeAsc,value:[recordid]
 	'''
-	global g_dictIndexDaliSearch
-	g_dictIndexDaliSearch = initCacheData.InitIndexSearch()
+	# global g_dictIndexDaliSearch
+	# g_dictIndexDaliSearch = initCacheData.InitIndexSearch()
 
 
 	app.run(

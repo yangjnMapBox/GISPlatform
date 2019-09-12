@@ -18,11 +18,12 @@ function search() {
                 let val = dataList[key];
                 currentProposals.push(val[2]);
                 let coordinates = [val[0], val[1]]
+				var liAddre = $('<p class="address"></p >').html(val[3]);
                 var element = $("<li></li>")
-                    .html(val[2])
+                    .html(val[2]).append(liAddre)
                     .addClass('list-group-item')
                     .click(function () {
-                        $('#searchName').val($(this).html());
+                        $('#searchName').val(this.firstChild.data);
                         $('#search-result').empty();
                         // params.onSubmit($('#searchName').val());
                         map.flyTo({

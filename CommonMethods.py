@@ -7,7 +7,7 @@ from configparser import ConfigParser
 def DatabaseConn():
 	# 读取数据库配置文件
 	const_cp = ConfigParser()
-	const_cp.read("E:/python/GISProject/GIS/db.cfg")
+	const_cp.read("db.cfg")
 	const_section = const_cp.sections()[0]
 	const_dbCfg = const_cp.get(const_section, "database")
 	const_userCfg = const_cp.get(const_section, "user")

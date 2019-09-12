@@ -1,4 +1,4 @@
-let radiuSize =200;
+let radiuSize =50;
 let stationColorArr = [['rgba(0,152,101,1)','rgba(1,246,164,'],['rgba(255,211,50,1)','rgba(255,250,153,'],['rgba(254,153,50,1)','rgba(224,203,182,'],
 						['rgba(203,0,50,1)','rgba(220,168,180,'],['rgba(71,1,106,1)','rgba(186,136,210,']];
 let levelArr = ["I","II","III","IV","V"]
@@ -51,7 +51,7 @@ function PulsingDot(radiuSize,rSide,gSide,bSide,rgba){
 		}
 	return pul;
 }
-let testPul = PulsingDot(300,"71","63","35","RGBA(173,155,90,1)");
+let testPul = PulsingDot(50,"71","63","35","RGBA(173,155,90,1)");
 let pulsingDot = {
 	width: radiuSize,
 	height: radiuSize,
@@ -341,17 +341,17 @@ map.on('load',function(){
 		//"clusterProperties": //根据属性聚类
 		"data":'static/json/animatedPoint.geojson'
 	});
-	map.addImage('pulsing-dot',testPul,{pixelRatio:3});
+	map.addImage('pulsing-dot',testPul,{pixelRatio:2});
 	map.addImage('pulsing-dot1',pulsingDot1,{pixelRatio:3});
 	map.addImage('pulsing-dot2',pulsingDot2,{pixelRatio:3});
 	map.addImage('pulsing-dot3',pulsingDot3,{pixelRatio:3});
 	map.addImage('pulsing-dot4',pulsingDot4,{pixelRatio:3});
 	map.addImage('pulsing-dot5',pulsingDot5,{pixelRatio:3});
-	objLayerIDs["监测站"].push('erhaiPollute');
+	// objLayerIDs["污染模拟"].push('erhaiPollute');
 	map.addLayer({
 		'id':'erhaiPollute',
 		'type':'symbol',
-		'minzoom':11.5,
+		'minzoom':8.5,
 		'source':{
 			'type':'geojson',
 			'data':{
@@ -378,32 +378,32 @@ map.on('load',function(){
 					},
 					'geometry':{
 						'type':'Point',
-						'coordinates':[100.221734,25.820866]
+						'coordinates':[100.22828024349928, 25.81911797917411]
 					}
 				}]
 			}
 		},
 		'layout':{
-		    'visibility':'visible',
+		    'visibility':'none',
 			'icon-image':'pulsing-dot',
 			// 'visibility':'none'
 		}
 	})
-	for (let i =0;i<5;i++)
-	{
-	    objLayerIDs["监测站"].push('erhaiStation'+(i+1).toString());
-		map.addLayer({
-			'id':'erhaiStation'+(i+1).toString(),
-			'type':'symbol',
-			'minzoom':11.5,
-			'filter':["==","phquality",levelArr[i]],
-			'source':'erhaiRIMS',
-			'layout':{
-			    'visibility':'visible',
-				'icon-image':'pulsing-dot'+(i+1).toString(),
-				// 'visibility':'none'
-			}
-		})
-	}
+// 	for (let i =0;i<5;i++)
+// 	{
+// 	    objLayerIDs["监测站"].push('erhaiStation'+(i+1).toString());
+// 		map.addLayer({
+// 			'id':'erhaiStation'+(i+1).toString(),
+// 			'type':'symbol',
+// 			'minzoom':11.5,
+// 			'filter':["==","phquality",levelArr[i]],
+// 			'source':'erhaiRIMS',
+// 			'layout':{
+// 			    'visibility':'visible',
+// 				'icon-image':'pulsing-dot'+(i+1).toString(),
+// 				// 'visibility':'none'
+// 			}
+// 		})
+// 	}
 })
 

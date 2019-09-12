@@ -70,7 +70,8 @@ cursor = conn.cursor()
 # print(time2)
 # print (subTime)
 
-arr = [1,2,3]
-s = ','.join(str(i) for i in arr)
-print (s)
+
+a = [1,2,3]
+if 4 not in a :
+    print (-1)
 # print(c)

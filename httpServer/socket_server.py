@@ -55,7 +55,7 @@ while True:
 			print(len(inputs)-1)
 		else:
 			try:
-				data = r.recv(1024)
+ 				data = r.recv(1024)
 				disconnected = not data
 			except:
 				disconnected = True
@@ -64,8 +64,9 @@ while True:
 				print(len(inputs) - 1)
 			else:
 				try:
-					with open('data.txt',"w") as js:
-						js.write(data)
+					print(data)
+					# with open('data.txt',"w") as js:
+					# 	js.write(data)
 					# dictData = json.loads(data)
 					# nowTime = time.localtime()
 					# dictData["serverTime"] = time.strftime("%Y-%m-%d %H:%M:%S",nowTime)

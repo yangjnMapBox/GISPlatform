@@ -47,13 +47,13 @@
     /* height: 500px; */
     /* background: #4A5060; */
     overflow: auto;
-    -ms-overflow-style: none;
+    /* -ms-overflow-style: none; */
     /*火狐下隐藏滚动条*/
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
 .layers {
-    max-height: 478px;
+    max-height: 310px;
 }
 
 .layers .layer {
@@ -139,9 +139,9 @@ input[type="checkbox"]:checked+i {
 /* 搜索框 */
 .search {
     width: 325px;
-    position: absolute;
+    position: relative;
     top: 15px;
-    right: 5%;
+    left: 75%;
     z-index: 25;
 }
 
@@ -184,7 +184,7 @@ input[type="checkbox"]:checked+i {
     /* position: relative; */
     overflow: auto;
     max-height: 160px;
-    width: 60%;
+    width: 85%;
     margin: 1px 2px;
     color: #E9E7E7;
     background: #999;
@@ -355,6 +355,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* 地图点击框 */
+.mapboxgl-popup{
+	max-width: 400px !important;
+}
+
 .mapboxgl-popup-content {
     box-shadow: 0px 0px 5px #6575A9;
     padding: 10px;
@@ -420,4 +424,18 @@ table.popTable td input {
     width:200px;
     color:RGB(245,246,247);
     font:23px Georgia, "Times New Roman", Times, serif; text-decoration:none;
+}
+.mapboxgl-popup-close-button{
+	font-size: 18px;
+	margin: 3px 3px 0px 0px;
+}
+.address{
+    font-size: 10px;
+    margin: 0;
+    color: #C4C4C4;
+    line-height: 15px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    /*禁止换行显示*/
+    white-space:nowrap;
 }

@@ -148,8 +148,12 @@ map.on("load", function () {
       doubleClickZoom:false,
       touchZoomRotate:false
     });
-	map.addControl(miniMap, 'bottom-right')
+	map.addControl(miniMap, 'bottom-right');
+	let minimap = document.getElementById('minimap');
+	minimap.style.border = 'solid 2px #000';
+	
 });
+
 ////比例分级滑块
 //var slider = document.getElementById("silder");
 //slider.value = 10;

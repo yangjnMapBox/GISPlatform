@@ -5,6 +5,7 @@ import psycopg2
 from flask import Flask, render_template
 from flask import request
 from configparser import ConfigParser
+import GeometryClass
 import math
 
 '''
@@ -208,23 +209,22 @@ def rad(d):
 '''
 计算两点距离
 输入两点经纬度坐标（单位度）
-输出距离（单位米）
+输出距离（单位米）,保留两位有效数字
 '''
-def CalDistanceP2P(lng1,lat1,lng2,lat2):
-	#地球半径，单位米
-	earthRadius = 6378137
-	radLat1 = rad(lat1)
-	radLat2 = rad(lat2)
-	subLat = radLat1 - radLat2
-	subLng = rad(lng1) - rad(lng2)
-	s = 2*math.asin(math.sqrt(math.pow(math.sin(subLat/2),2) + math.cos(radLat1)*math.cos(radLat2)
-							   *math.pow(math.sin(subLng/2),2)))
-	s = s * earthRadius
-	return s
-
-
-
-
+def CalDistanceP2P(lat1,lon1,lat2,lon2):
+	R=6371.393
+	dlat=rad(lat2-lat1)
+	dlon=rad(lon2-lon1)
+	a=math.sin(dlat/2)**2+math.cos(rad(lat1))*math.cos(rad(lat2))*math.sin(dlon/2)**2
+	c=2*math.atan2(math.sqrt(a),math.sqrt(1-a))
+	return round(R*c*1000,2)
+'''
+计算两点距离
+输入两点对象
+输出距离（单位米）,保留两位有效数字
+'''
+def ClaDistancePoint(point1,point2):
+	return CalDistanceP2P(point1.y,point1.x,point2.y,point2.x)
 
 
 

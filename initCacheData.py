@@ -2,8 +2,6 @@
 #-*- coding:utf-8 -*-
 import os
 import CommonMethods
-import numpy as np
-import matplotlib.pyplot as plt
 import GeometryMethod
 
 conn = CommonMethods.DatabaseConn()
@@ -15,6 +13,7 @@ def InitPOI():
     rows = CommonMethods.GetDataFromTable(cursor,strSql)
     for row in rows:
         dictPOI[row[0]] = [row[1],row[2],row[3],row[4]]
+    print("POI数量：",len(dictPOI))
     return dictPOI
 
 
@@ -38,4 +37,5 @@ def InitIndexSearch():
         for recordid in arrRecordid:
             arrRecordidInt.append(int(recordid))
         dictIndexDaliSearch[key] = arrRecordidInt
+    print("索引数量:",len(dictIndexDaliSearch))
     return dictIndexDaliSearch
